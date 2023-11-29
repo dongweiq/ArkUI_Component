@@ -43,8 +43,7 @@ struct ButtonPage {
     Column() {
       Navigation() {
         Column() {
-          Column()
-            .height(200)
+          Blank()
           Column() {
             Button('Button')
               .type(this.type)

@@ -6,6 +6,11 @@
     "pages/CheckboxGroupPage",
     "pages/DataPanelPage",
     "pages/DatePickerPage",
-    "pages/DividerPage"
+    "pages/DividerPage",
+    "pages/GaugePage",
+    "pages/ImagePage",
+    "pages/ImageAnimatorPage",
+    "pages/LoadingProgressPage",
+    "pages/MarqueePage"
   ]
 }

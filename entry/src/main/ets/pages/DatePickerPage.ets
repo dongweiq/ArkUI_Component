@@ -31,8 +31,7 @@ struct DatePickerPage {
     Column() {
       Navigation() {
         Column() {
-          Column()
-            .height(120)
+          Blank()
           Column() {
             DatePicker()
               .lunar(this.lunar)

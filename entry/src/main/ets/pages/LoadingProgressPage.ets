@@ -1,17 +1,12 @@
 import TitleTab from '../component/TitleTab'
 import Title from '../component/Title'
-import SliderCustom from '../component/SliderCustom'
 import SelectCustom from '../component/SelectCustom'
-import SwitchCustom from '../component/SwitchCustom'
+import SliderCustom from '../component/SliderCustom'
 
 @Entry
 @Component
-struct DividerPage {
+struct LoadingProgressPage {
   @State selectTab: number = 1
-
-  //vertical
-  @State vertical: boolean = false
-
   //color
   @State selectColor: Color = Color.Black
   @State colorList: Color[] = [Color.Black, Color.Blue, Color.Brown, Color.Green, Color.Orange, Color.Grey]
@@ -24,23 +19,15 @@ struct DividerPage {
     { value: 'Grey' }
   ]
 
-  //strokeWidth
-  @State strokeWidth: number = 1
-
-  //lineCap
-  @State selectLineCap: LineCapStyle = LineCapStyle.Butt
-  @State lineCapList: LineCapStyle[] = [LineCapStyle.Butt, LineCapStyle.Round, LineCapStyle.Square]
-  @State lineCapValueList: { value: string }[] = [{ value: 'Butt' }, { value: 'Round' }, { value: 'Square' }]
-
   //width
-  @State widthValue: number = 200
+  @State widthValue: number = 48
 
   //height
-  @State heightValue: number = 200
+  @State heightValue: number = 48
 
   @Builder pageTitle() {
     Column() {
-      Title({ pageTitle: 'Divider 分隔器' })
+      Title({ pageTitle: 'LoadingProgress 加载动效' })
       TitleTab({ selectTab: $selectTab, interface: false, property: true, common: true })
     }
     .width('100%')
@@ -53,49 +40,29 @@ struct DividerPage {
         Column() {
           Blank()
           Column() {
-            Divider()
+            LoadingProgress()
               .width(this.widthValue)
               .height(this.heightValue)
-              .vertical(this.vertical)
               .color(this.selectColor)
-              .strokeWidth(this.strokeWidth)
-              .lineCap(this.selectLineCap)
           }
 
           Blank()
 
           Column() {
-
             if (this.selectTab === 1) {
-              SwitchCustom({ name: 'vertical', isOn: $vertical })
-              Divider()
-                .color($r('app.color.line_grey'))
               SelectCustom({
-                name: 'color',
                 valuesList: $colorValueList,
                 itemsList: $colorList,
-                selectItem: $selectColor
+                selectItem: $selectColor,
+                name: 'color'
               })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SliderCustom({ name: 'strokeWidth', value: $strokeWidth, min: 1, max: 10 })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SelectCustom({
-                name: 'lineCap',
-                valuesList: $lineCapValueList,
-                itemsList: $lineCapList,
-                selectItem: $selectLineCap
-              })
-
             }
             if (this.selectTab === 2) {
-              SliderCustom({ value: $widthValue, name: 'width', min: 100, max: 350 })
+              SliderCustom({ value: $widthValue, name: 'width', min: 24, max: 100 })
               Divider()
                 .color($r('app.color.line_grey'))
-              SliderCustom({ value: $heightValue, name: 'height', min: 100, max: 350 })
+              SliderCustom({ value: $heightValue, name: 'height', min: 24, max: 100 })
             }
-
           }
           .padding({ left: 12, right: 12 })
           .backgroundColor($r('app.color.start_window_background'))

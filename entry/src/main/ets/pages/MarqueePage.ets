@@ -4,25 +4,29 @@ import SliderCustom from '../component/SliderCustom'
 import SelectCustom from '../component/SelectCustom'
 import SwitchCustom from '../component/SwitchCustom'
 
-
 @Entry
 @Component
-struct DataPanelPage {
+struct MarqueePage {
   @State selectTab: number = 0
 
-  //values
-  @State panelData: number[] = [10, 10, 10, 10, 10, 10, 10, 10, 10]
+  //start
+  @State start: boolean = true
 
-  //max
-  @State max: number = 100
+  //step
+  @State step: number = 6
 
-  //type
-  @State type: DataPanelType = DataPanelType.Circle
-  @State typeList: DataPanelType[] = [DataPanelType.Circle, DataPanelType.Line]
-  @State typeValueList: { value: string }[] = [{ value: 'Circle' }, { value: 'Line' }]
+  //loop
 
-  //closeEffect
-  @State closeEffect: boolean = false
+  @State loop: number = -1
+
+  //fromStart
+  @State fromStart: boolean = true
+
+  //src
+  src: string = '跑马灯组件，用于滚动展示一段单行文本，仅当文本内容宽度超过跑马灯组件宽度时滚动。'
+
+  //allowScale
+  @State allowScale: boolean = false
 
   //width
   @State widthValue: number = 300
@@ -32,7 +36,7 @@ struct DataPanelPage {
 
   @Builder pageTitle() {
     Column() {
-      Title({ pageTitle: 'DataPanel 数据面板' })
+      Title({ pageTitle: 'Marquee 跑马灯' })
       TitleTab({ selectTab: $selectTab, interface: true, property: true, common: true })
     }
     .width('100%')
@@ -45,18 +49,14 @@ struct DataPanelPage {
         Column() {
           Blank()
           Column() {
-            Stack() {
-              DataPanel({ values: this.panelData, type: this.type, max: this.max })
-                .width(this.widthValue)
-                .height(this.heightValue)
-                .closeEffect(this.closeEffect)
-              Button('刷新数据')
-                .type(ButtonType.Circle)
-                .fontColor($r('app.color.font_light'))
-                .width(100)
-                .backgroundColor($r('app.color.start_window_background'))
-                .onClick(() => this.refreshData())
-            }
+            Marquee({
+              start: this.start,
+              step: this.step,
+              loop: this.loop,
+              fromStart: this.fromStart,
+              src: this.src
+            })
+              .allowScale(this.allowScale)
 
           }
 
@@ -64,13 +64,20 @@ struct DataPanelPage {
           Blank()
           Column() {
             if (this.selectTab === 0) {
-              SliderCustom({ value: $max, name: 'max', min: 50, max: 300 })
+              SwitchCustom({ name: 'start', isOn: $start })
               Divider()
                 .color($r('app.color.line_grey'))
-              SelectCustom({ name: 'type', itemsList: $typeList, valuesList: $typeValueList, selectItem: $type })
+              SliderCustom({ name: 'step', value: $step, min: 0, max: 40 })
+              Divider()
+                .color($r('app.color.line_grey'))
+              SliderCustom({ name: 'loop', value: $loop, min: -1, max: 3 })
+              Divider()
+                .color($r('app.color.line_grey'))
+              SwitchCustom({ name: 'fromStart', isOn: $fromStart })
+
             }
             if (this.selectTab === 1) {
-              SwitchCustom({ name: 'closeEffect', isOn: $closeEffect })
+              SwitchCustom({ name: 'allowScale', isOn: $allowScale })
             }
             if (this.selectTab === 2) {
               SliderCustom({ value: $widthValue, name: 'width', min: 200, max: 350 })
@@ -98,11 +105,5 @@ struct DataPanelPage {
     .height('100%')
     .width('100%')
     .backgroundColor($r('app.color.background_grey'))
-  }
-
-  refreshData() {
-    for (let index = 0; index < this.panelData.length; index++) {
-      this.panelData[index] = Math.floor(Math.random() * 18)
-    }
   }
 }
