@@ -1,0 +1,32 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "background_grey",
+      "value": "#f1f1f1"
+    },
+    {
+      "name": "line_grey",
+      "value": "#eeeeee"
+    },
+    {
+      "name": "brand",
+      "value": "#0a59f7"
+    },
+    {
+      "name": "font_main",
+      "value": "#333333"
+    },
+    {
+      "name": "font_normal",
+      "value": "#666666"
+    },
+    {
+      "name": "font_light",
+      "value": "#999999"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/ButtonPage",
+    "pages/Index",
+    "pages/CheckboxPage",
+    "pages/CheckboxGroupPage",
+    "pages/DataPanelPage",
+    "pages/DatePickerPage",
+    "pages/DividerPage"
+  ]
+}
