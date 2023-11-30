@@ -20,7 +20,6 @@ export default struct SelectCustom {
       }
       .width('100%')
       .height(50)
-
     }
     .width('100%')
   }

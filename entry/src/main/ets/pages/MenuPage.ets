@@ -5,27 +5,8 @@ import SwitchCustom from '../component/SwitchCustom'
 
 @Entry
 @Component
-struct MarqueePage {
-  @State selectTab: number = 0
-
-  //start
-  @State start: boolean = true
-
-  //step
-  @State step: number = 6
-
-  //loop
-
-  @State loop: number = -1
-
-  //fromStart
-  @State fromStart: boolean = true
-
-  //src
-  private src: string = '跑马灯组件，用于滚动展示一段单行文本，仅当文本内容宽度超过跑马灯组件宽度时滚动。'
-
-  //allowScale
-  @State allowScale: boolean = false
+struct MenuPage {
+  @State selectTab: number = 1
 
   //width
   @State widthValue: number = 300
@@ -35,12 +16,13 @@ struct MarqueePage {
 
   @Builder pageTitle() {
     Column() {
-      Title({ pageTitle: 'Marquee 跑马灯' })
-      TitleTab({ selectTab: $selectTab, interface: true, property: true, common: true })
+      Title({ pageTitle: 'Menu 菜单' })
+      TitleTab({ selectTab: $selectTab, interface: false, property: true, common: true })
     }
     .width('100%')
     .backgroundColor($r('app.color.start_window_background'))
   }
+
 
   build() {
     Column() {
@@ -48,35 +30,16 @@ struct MarqueePage {
         Column() {
           Blank()
           Column() {
-            Marquee({
-              start: this.start,
-              step: this.step,
-              loop: this.loop,
-              fromStart: this.fromStart,
-              src: this.src
-            })
-              .allowScale(this.allowScale)
-
+            Text('click to show menu')
+              .fontSize(32)
+              .fontWeight(FontWeight.Bold)
           }
 
 
           Blank()
           Column() {
-            if (this.selectTab === 0) {
-              SwitchCustom({ name: 'start', isOn: $start })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SliderCustom({ name: 'step', value: $step, min: 0, max: 40 })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SliderCustom({ name: 'loop', value: $loop, min: -1, max: 3 })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SwitchCustom({ name: 'fromStart', isOn: $fromStart })
-
-            }
             if (this.selectTab === 1) {
-              SwitchCustom({ name: 'allowScale', isOn: $allowScale })
+
             }
             if (this.selectTab === 2) {
               SliderCustom({ value: $widthValue, name: 'width', min: 200, max: 350 })
@@ -101,6 +64,7 @@ struct MarqueePage {
       .hideBackButton(false)
 
     }
+
     .height('100%')
     .width('100%')
     .backgroundColor($r('app.color.background_grey'))

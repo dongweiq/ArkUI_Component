@@ -11,6 +11,10 @@
     "pages/ImagePage",
     "pages/ImageAnimatorPage",
     "pages/LoadingProgressPage",
-    "pages/MarqueePage"
+    "pages/MarqueePage",
+    "pages/MenuPage",
+    "pages/ProgressPage",
+    "pages/QRCodePage",
+    "pages/RadioPage"
   ]
 }

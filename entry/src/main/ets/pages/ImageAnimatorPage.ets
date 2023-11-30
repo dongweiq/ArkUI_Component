@@ -10,7 +10,7 @@ struct ImageAnimatorPage {
   @State selectTab: number = 1
 
   //images
-  images: ImageFrameInfo[] = [
+  private images: ImageFrameInfo[] = [
     { src: $r('app.media.stack01') },
     { src: $r('app.media.stack02') },
     { src: $r('app.media.stack03') },
