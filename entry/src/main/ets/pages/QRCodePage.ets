@@ -40,7 +40,7 @@ struct QRCodePage {
   Color.Green,
   Color.Orange
   ]
-  @State backgroundValueColorList: { value: string }[] = [
+  @State backgroundColorValueList: { value: string }[] = [
     { value: 'Gray' },
     { value: 'Black' },
     { value: 'Blue' },
@@ -80,7 +80,6 @@ struct QRCodePage {
           Blank()
 
           Column() {
-
             if (this.selectTab === 1) {
               SelectCustom({
                 name: 'color',
@@ -88,19 +87,17 @@ struct QRCodePage {
                 itemsList: $colorList,
                 selectItem: $selectColor
               })
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SelectCustom({
                 name:'backgroundColor',
-                valuesList:$backgroundValueColorList,
+                valuesList:$backgroundColorValueList,
                 itemsList:$backgroundColorList,
                 selectItem:$selectBackgroundColor
               })
             }
             if (this.selectTab === 2) {
               SliderCustom({ value: $widthValue, name: 'width', min: 100, max: 350 })
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SliderCustom({ value: $heightValue, name: 'height', min: 100, max: 350 })
             }
 

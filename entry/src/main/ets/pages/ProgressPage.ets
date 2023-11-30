@@ -62,7 +62,7 @@ struct ProgressPage {
   Color.Green,
   Color.Orange
   ]
-  @State backgroundValueColorList: { value: string }[] = [
+  @State backgroundColorValueList: { value: string }[] = [
     { value: 'Gray' },
     { value: 'Black' },
     { value: 'Blue' },
@@ -116,11 +116,9 @@ struct ProgressPage {
           Column() {
             if (this.selectTab === 0) {
               SliderCustom({name:'value',value:$currentValue,min:100,max:200})
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SliderCustom({name:'total',value:$total,min:200,max:400})
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SelectCustom({
                 name:'type',
                 selectItem:$selectType,
@@ -137,29 +135,24 @@ struct ProgressPage {
                 itemsList: $colorList,
                 selectItem: $selectColor
               })
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SelectCustom({
                 name:'backgroundColor',
-                valuesList:$backgroundValueColorList,
+                valuesList:$backgroundColorValueList,
                 itemsList:$backgroundColorList,
                 selectItem:$selectBackgroundColor
               })
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SliderCustom({name:'strokeWidth',value:$strokeWidth,min:1,max:20})
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SliderCustom({name:'scaleCount',value:$scaleCount,min:60,max:240})
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SliderCustom({name:'scaleWidth',value:$scaleWidth,min:1,max:5})
 
             }
             if (this.selectTab === 2) {
               SliderCustom({ value: $widthValue, name: 'width', min: 100, max: 350 })
-              Divider()
-                .color($r('app.color.line_grey'))
+              Divider().color($r('app.color.line_grey'))
               SliderCustom({ value: $heightValue, name: 'height', min: 100, max: 350 })
             }
 

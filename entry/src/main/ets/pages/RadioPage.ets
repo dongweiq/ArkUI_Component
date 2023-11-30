@@ -1,6 +1,5 @@
 import TitleTab from '../component/TitleTab'
 import Title from '../component/Title'
-import SelectCustom from '../component/SelectCustom'
 import SliderCustom from '../component/SliderCustom'
 
 @Entry
@@ -9,7 +8,14 @@ struct RadioPage {
   @State selectTab: number = 2
   //color
   @State selectColor: Color = Color.Black
-  @State colorList: Color[] = [Color.Black, Color.Blue, Color.Brown, Color.Green, Color.Orange, Color.Grey]
+  @State colorList: Color[] = [
+  Color.Black,
+  Color.Blue,
+  Color.Brown,
+  Color.Green,
+  Color.Orange,
+  Color.Grey
+  ]
   @State colorValueList: { value: string }[] = [
     { value: 'Black' },
     { value: 'Blue' },

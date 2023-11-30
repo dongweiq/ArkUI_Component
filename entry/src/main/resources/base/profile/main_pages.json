@@ -15,6 +15,10 @@
     "pages/MenuPage",
     "pages/ProgressPage",
     "pages/QRCodePage",
-    "pages/RadioPage"
+    "pages/RadioPage",
+    "pages/PatternLockPage",
+    "pages/RatingPage",
+    "pages/SearchPage",
+    "pages/SelectPage"
   ]
 }
