@@ -6,7 +6,7 @@ import SliderCustom from '../component/SliderCustom'
 
 @Entry
 @Component
-struct ButtonPage {
+struct TextPage {
   @State selectTab: number = 1
 
   //type
@@ -56,33 +56,30 @@ struct ButtonPage {
 
           Blank()
 
-          Column() {
-            //tab 1
-            Column () {
-              SelectCustom({ name: 'type', valuesList: $typeValueArr, itemsList: $typeArr, selectItem: $type })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SwitchCustom({ name: 'stateEffect', isOn: $stateEffect })
-            }
-            .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
-            
-            //tab 2
-            Column(){
-              SliderCustom({ name: 'width', value: $widthValue, min: 50, max: 180 })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SliderCustom({ name: 'height', value: $heightValue, min: 20, max: 120 })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SliderCustom({ name: 'fontSize', value: $sizeValue, min: 10, max: 40 })
-            }
-            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
 
-          }
-          .padding({ left: 12, right: 12 })
-          .backgroundColor($r('app.color.start_window_background'))
-          .margin({ left: 20, right: 20, top: 16, bottom: 16 })
-          .borderRadius(16)
+            Column() {
+              Column(){
+                SelectCustom({ name: 'type', valuesList: $typeValueArr, itemsList: $typeArr, selectItem: $type })
+                Divider()
+                  .color($r('app.color.line_grey'))
+                SwitchCustom({ name: 'stateEffect', isOn: $stateEffect })
+              }
+              .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
+              Column(){
+                SliderCustom({ name: 'width', value: $widthValue, min: 50, max: 180 })
+                Divider()
+                  .color($r('app.color.line_grey'))
+                SliderCustom({ name: 'height', value: $heightValue, min: 20, max: 120 })
+                Divider()
+                  .color($r('app.color.line_grey'))
+                SliderCustom({ name: 'fontSize', value: $sizeValue, min: 10, max: 40 })
+              }
+              .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
+            }
+            .padding({ left: 12, right: 12 })
+            .backgroundColor($r('app.color.start_window_background'))
+            .margin({ left: 20, right: 20, top: 16, bottom: 16 })
+            .borderRadius(16)
 
         }
         .height('100%')
@@ -100,4 +97,3 @@ struct ButtonPage {
     .backgroundColor($r('app.color.background_grey'))
   }
 }
-

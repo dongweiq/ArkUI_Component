@@ -66,7 +66,8 @@ struct DividerPage {
 
           Column() {
 
-            if (this.selectTab === 1) {
+            // tab 1
+            Column() {
               SwitchCustom({ name: 'vertical', isOn: $vertical })
               Divider()
                 .color($r('app.color.line_grey'))
@@ -89,12 +90,17 @@ struct DividerPage {
               })
 
             }
-            if (this.selectTab === 2) {
+            .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
+
+            // tab 2
+            Column() {
               SliderCustom({ value: $widthValue, name: 'width', min: 100, max: 350 })
               Divider()
                 .color($r('app.color.line_grey'))
               SliderCustom({ value: $heightValue, name: 'height', min: 100, max: 350 })
             }
+            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
+
 
           }
           .padding({ left: 12, right: 12 })

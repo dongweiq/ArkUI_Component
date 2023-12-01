@@ -19,6 +19,8 @@
     "pages/PatternLockPage",
     "pages/RatingPage",
     "pages/SearchPage",
-    "pages/SelectPage"
+    "pages/SelectPage",
+    "pages/SliderPage",
+    "pages/TextPage"
   ]
 }

@@ -159,7 +159,8 @@ struct SelectPage {
 
           Column() {
 
-            if (this.selectTab === 1) {
+            //tab 1
+            Column() {
               SelectCustom({
                 name: 'fontColor',
                 selectItem: $fontColor,
@@ -195,11 +196,15 @@ struct SelectPage {
                 valuesList: $optionBgColorValueList
               })
             }
-            if (this.selectTab === 2) {
+            .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
+
+            //tab 2
+            Column() {
               SliderCustom({ name: 'width', value: $widthValue, min: 50, max: 300 })
               Divider().color($r('app.color.line_grey'))
               SliderCustom({ name: 'height', value: $heightValue, min: 20, max: 120 })
             }
+            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
 
           }
           .padding({ left: 12, right: 12 })

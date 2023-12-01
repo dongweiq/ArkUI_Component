@@ -62,7 +62,9 @@ struct MarqueePage {
 
           Blank()
           Column() {
-            if (this.selectTab === 0) {
+
+            // tab 0
+            Column() {
               SwitchCustom({ name: 'start', isOn: $start })
               Divider()
                 .color($r('app.color.line_grey'))
@@ -73,17 +75,26 @@ struct MarqueePage {
               Divider()
                 .color($r('app.color.line_grey'))
               SwitchCustom({ name: 'fromStart', isOn: $fromStart })
-
             }
-            if (this.selectTab === 1) {
+            .visibility(this.selectTab === 0 ? Visibility.Visible : Visibility.None)
+
+
+            // tab 1
+            Column() {
               SwitchCustom({ name: 'allowScale', isOn: $allowScale })
             }
-            if (this.selectTab === 2) {
+            .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
+
+
+            // tab 2
+            Column() {
               SliderCustom({ value: $widthValue, name: 'width', min: 200, max: 350 })
               Divider()
                 .color($r('app.color.line_grey'))
               SliderCustom({ value: $heightValue, name: 'height', min: 10, max: 350 })
             }
+            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
+
           }
           .padding({ left: 12, right: 12 })
           .backgroundColor($r('app.color.start_window_background'))

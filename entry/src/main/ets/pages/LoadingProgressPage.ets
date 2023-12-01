@@ -49,7 +49,8 @@ struct LoadingProgressPage {
           Blank()
 
           Column() {
-            if (this.selectTab === 1) {
+            // tab 1
+            Column() {
               SelectCustom({
                 valuesList: $colorValueList,
                 itemsList: $colorList,
@@ -57,12 +58,20 @@ struct LoadingProgressPage {
                 name: 'color'
               })
             }
-            if (this.selectTab === 2) {
+            .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
+
+
+            // tab 2
+            Column() {
               SliderCustom({ value: $widthValue, name: 'width', min: 24, max: 100 })
               Divider()
                 .color($r('app.color.line_grey'))
               SliderCustom({ value: $heightValue, name: 'height', min: 24, max: 100 })
             }
+            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
+
+
+
           }
           .padding({ left: 12, right: 12 })
           .backgroundColor($r('app.color.start_window_background'))

@@ -99,7 +99,9 @@ struct ImageAnimatorPage {
 
           Blank()
           Column() {
-            if (this.selectTab === 1) {
+
+            // tab 1
+            Column(){
               SelectCustom({
                 name: 'state',
                 selectItem: $selectState,
@@ -122,13 +124,18 @@ struct ImageAnimatorPage {
               })
               SliderCustom({ name: 'iterations', value: $iterations, min: -1, max: 3 })
             }
+            .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
 
-            if (this.selectTab === 2) {
+
+            // tab 2
+            Column() {
               SliderCustom({ value: $widthValue, name: 'width', min: 100, max: 300 })
               Divider()
                 .color($r('app.color.line_grey'))
               SliderCustom({ value: $heightValue, name: 'height', min: 100, max: 300 })
             }
+            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
+
           }
           .padding({ left: 12, right: 12 })
           .backgroundColor($r('app.color.start_window_background'))

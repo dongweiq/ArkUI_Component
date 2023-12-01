@@ -68,9 +68,13 @@ struct RadioPage {
           Blank()
 
           Column() {
-            if (this.selectTab === 2) {
+
+            //tab 2
+            Column() {
               SliderCustom({ name: 'width', value: $widthValue, min: 12, max: 48 })
             }
+            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
+
           }
           .padding({ left: 12, right: 12 })
           .backgroundColor($r('app.color.start_window_background'))

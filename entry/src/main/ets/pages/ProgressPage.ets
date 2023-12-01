@@ -114,7 +114,9 @@ struct ProgressPage {
           Blank()
 
           Column() {
-            if (this.selectTab === 0) {
+
+            //tab 0
+            Column() {
               SliderCustom({name:'value',value:$currentValue,min:100,max:200})
               Divider().color($r('app.color.line_grey'))
               SliderCustom({name:'total',value:$total,min:200,max:400})
@@ -126,8 +128,10 @@ struct ProgressPage {
                 valuesList:$typeValueList
               })
             }
+            .visibility(this.selectTab === 0 ? Visibility.Visible : Visibility.None)
 
-            if (this.selectTab === 1) {
+            //tab 1
+            Column() {
 
               SelectCustom({
                 name: 'color',
@@ -150,11 +154,17 @@ struct ProgressPage {
               SliderCustom({name:'scaleWidth',value:$scaleWidth,min:1,max:5})
 
             }
-            if (this.selectTab === 2) {
+            .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
+
+
+            //tab 2
+            Column() {
               SliderCustom({ value: $widthValue, name: 'width', min: 100, max: 350 })
               Divider().color($r('app.color.line_grey'))
               SliderCustom({ value: $heightValue, name: 'height', min: 100, max: 350 })
             }
+            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
+
 
           }
           .padding({ left: 12, right: 12 })

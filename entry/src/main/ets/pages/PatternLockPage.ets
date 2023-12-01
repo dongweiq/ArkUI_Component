@@ -148,7 +148,9 @@ struct PatternLockPage {
 
           Blank()
           Column() {
-            if (this.selectTab === 1) {
+
+            //tab 1
+            Column() {
               SliderCustom({ name: 'sideLength', value: $sideLength, min: 100, max: 270 })
               Divider().color($r('app.color.line_grey'))
               SliderCustom({ name: 'circleRadius', value: $circleRadius, min: 5, max: 15 })
@@ -184,7 +186,11 @@ struct PatternLockPage {
               SliderCustom({ name: 'pathStroke', value: $pathStrokeWidth, min: 2, max: 15 })
 
             }
-            if (this.selectTab === 2) {
+            .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
+
+
+            //tab 2
+            Column() {
               SelectCustom({
                 name: 'backgroundColor',
                 valuesList: $backgroundValueColorList,
@@ -192,6 +198,8 @@ struct PatternLockPage {
                 selectItem: $selectBackgroundColor
               })
             }
+            .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
+
           }
           .padding({ left: 12, right: 12 })
           .backgroundColor($r('app.color.start_window_background'))
