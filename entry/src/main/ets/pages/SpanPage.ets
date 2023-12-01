@@ -5,38 +5,8 @@ import SelectCustom from '../component/SelectCustom'
 
 @Entry
 @Component
-struct TextPage {
+struct SpanPage {
   @State selectTab: number = 1
-
-  //textAlign
-  @State textAlign : TextAlign = TextAlign.Center
-  @State textAlignList : TextAlign[] = [
-  TextAlign.Center,
-  TextAlign.Start,
-  TextAlign.End
-  ]
-  @State textAlignValueList : { value: string }[] = [
-    { value: 'Center' },
-    { value: 'Start' },
-    { value: 'End' }
-  ]
-
-  //maxLines
-  @State maxLines : number = 1
-
-  //textOverflow
-  @State textOverflow :TextOverflow = TextOverflow.None
-  @State textOverflowList :TextOverflow[] = [
-  TextOverflow.None,
-  TextOverflow.Clip,
-  TextOverflow.Ellipsis,
-  ]
-  @State textOverflowValueList: { value: string }[] = [
-    { value: 'None' },
-    { value: 'Clip' },
-    { value: 'Ellipsis' }
-  ]
-
 
   //type
   @State type: TextDecorationType = TextDecorationType.Underline
@@ -72,9 +42,6 @@ struct TextPage {
     { value: 'Grey' }
   ]
 
-  //baselineOffset
-  @State baselineOffset : number = 0
-
   //letterSpacing
   @State letterSpacing: number = 5
 
@@ -94,12 +61,9 @@ struct TextPage {
   //fontSize
   @State fontSize: number = 20
 
-  //width
-  @State widthValue: number = 300
-
   @Builder pageTitle() {
     Column() {
-      Title({ pageTitle: 'Text 文本' })
+      Title({ pageTitle: 'Span 行内文本' })
       TitleTab({ selectTab: $selectTab, interface: false, property: true, common: true })
     }
     .width('100%')
@@ -112,16 +76,16 @@ struct TextPage {
         Column() {
           Blank()
           Column() {
-            Text('This is text demonstration')
-              .textAlign(this.textAlign)
-              .textOverflow({overflow:this.textOverflow})
-              .decoration({type:this.type,color:this.color})
-              .baselineOffset(this.baselineOffset)
-              .letterSpacing(this.letterSpacing)
-              .textCase(this.textCase)
-              .fontSize(this.fontSize)
-              .width(this.widthValue)
-              .maxLines(this.maxLines)
+            Text() {
+              Span('I am Span')
+                .decoration({
+                  type: this.type,
+                  color: this.color
+                })
+                .letterSpacing(this.letterSpacing)
+                .textCase(this.textCase)
+                .fontSize(this.fontSize)
+            }
           }
 
           Blank()
@@ -129,22 +93,6 @@ struct TextPage {
 
             // tab 1
             Column() {
-              SelectCustom({
-                name: 'textAlign',
-                selectItem: $textAlign,
-                itemsList: $textAlignList,
-                valuesList: $textAlignValueList
-              })
-              Divider().color($r('app.color.line_grey'))
-              SelectCustom({
-                name: 'textOverflow',
-                selectItem: $textOverflow,
-                itemsList: $textOverflowList,
-                valuesList: $textOverflowValueList
-              })
-              Divider().color($r('app.color.line_grey'))
-              SliderCustom({name:'maxLines',value:$maxLines,min:1,max:3})
-              Divider().color($r('app.color.line_grey'))
               SelectCustom({
                 name: 'decoration-type',
                 selectItem: $type,
@@ -158,8 +106,6 @@ struct TextPage {
                 itemsList: $colorList,
                 valuesList: $colorValueList
               })
-              Divider().color($r('app.color.line_grey'))
-              SliderCustom({name:'baselineOffset',value:$baselineOffset,min:-20,max:20})
               Divider().color($r('app.color.line_grey'))
               SliderCustom({ name: 'letterSpacing', value: $letterSpacing, min: -10, max: 20 })
               Divider().color($r('app.color.line_grey'))
@@ -176,8 +122,6 @@ struct TextPage {
             // tab 2
             Column() {
               SliderCustom({ name: 'fontSize', value: $fontSize, min: 10, max: 40 })
-              Divider().color($r('app.color.line_grey'))
-              SliderCustom({ value: $widthValue, name: 'width', min: 200, max: 350 })
             }
             .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
 

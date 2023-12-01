@@ -21,6 +21,11 @@
     "pages/SearchPage",
     "pages/SelectPage",
     "pages/SliderPage",
-    "pages/TextPage"
+    "pages/TextPage",
+    "pages/SpanPage",
+    "pages/StepperPage",
+    "pages/TextAreaPage",
+    "pages/TextClockPage",
+    "pages/TextInputPage"
   ]
 }
