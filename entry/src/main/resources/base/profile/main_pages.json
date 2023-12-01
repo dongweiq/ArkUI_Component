@@ -26,6 +26,10 @@
     "pages/StepperPage",
     "pages/TextAreaPage",
     "pages/TextClockPage",
-    "pages/TextInputPage"
+    "pages/TextInputPage",
+    "pages/TextPickerPage",
+    "pages/TextTimerPage",
+    "pages/TimePickerPage",
+    "pages/TogglePage"
   ]
 }
