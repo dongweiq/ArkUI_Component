@@ -1,7 +1,7 @@
 {
   "src": [
     "pages/basic/ButtonPage",
-    "pages/basic/Index",
+    "pages/Index",
     "pages/basic/CheckboxPage",
     "pages/basic/CheckboxGroupPage",
     "pages/basic/DataPanelPage",
