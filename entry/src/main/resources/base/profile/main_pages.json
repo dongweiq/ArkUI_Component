@@ -31,6 +31,18 @@
     "pages/basic/TextTimerPage",
     "pages/basic/TimePickerPage",
     "pages/basic/TogglePage",
-    "pages/container/BadgePage"
+    "pages/container/BadgePage",
+    "pages/container/ColumnPage",
+    "pages/container/CounterPage",
+    "pages/container/FlexPage",
+    "pages/container/RowPage",
+    "pages/container/StackPage",
+    "pages/container/GridPage",
+    "pages/container/ListPage",
+    "pages/container/PanelPage",
+    "pages/container/ScrollPage",
+    "pages/container/SideBarContainerPage",
+    "pages/container/SwiperPage",
+    "pages/container/TabsPage"
   ]
 }
