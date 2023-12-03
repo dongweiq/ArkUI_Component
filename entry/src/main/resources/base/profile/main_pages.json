@@ -43,6 +43,7 @@
     "pages/container/ScrollPage",
     "pages/container/SideBarContainerPage",
     "pages/container/SwiperPage",
-    "pages/container/TabsPage"
+    "pages/container/TabsPage",
+    "pages/pop/AlertDialogPage"
   ]
 }
