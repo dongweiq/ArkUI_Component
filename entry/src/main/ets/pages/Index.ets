@@ -1,29 +1,41 @@
 import router from '@ohos.router';
+import pageIndex from '../bean/pageIndex'
 
 @Entry
 @Component
 struct Index {
   build() {
 
-    Column({space:40}) {
-      Text('ButtonPage')
-        .fontSize(50)
-        .onClick(() => {
-          onJumpClick('pages/basic/ButtonPage')
+    Column() {
+      List({ space: 20 }) {
+        ForEach(pageIndex,(item:{  name: string,
+        address: string})=>{
+          ListItem() {
+            Column() {
+              Text(item.name)
+                .fontSize(16)
+                .margin({left:8})
+                .fontColor($r('app.color.font_normal'))
+                .onClick(() => {
+                  onJumpClick(item.address)
+                })
+            }
+            .alignItems(HorizontalAlign.Start)
+            .padding(8)
+            .width('100%')
+            .backgroundColor(Color.White)
+            .borderRadius(8)
+          }
         })
 
-      Text('CheckboxPage')
-        .fontSize(50)
-        .onClick(() => {
-          onJumpClick('pages/basic/CheckboxPage')
-        })
+      }
+      .width('100%')
+      .height('100%')
 
-      Text('TabsPage')
-        .fontSize(50)
-        .onClick(() => {
-          onJumpClick('pages/container/TabsPage')
-        })
     }
+    .padding(20)
+    .width('100%')
+    .backgroundColor($r('app.color.background_grey'))
 
   }
 }

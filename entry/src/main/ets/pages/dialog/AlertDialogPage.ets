@@ -126,7 +126,7 @@ struct AlertDialogPage {
                 valuesList:$alignmentValueList
               })
               Divider().color($r('app.color.line_grey'))
-              SliderCustom({name:'offset_dy',value:$offset_dx,min:-200,max:200})
+              SliderCustom({name:'offset_dx',value:$offset_dx,min:-200,max:200})
               Divider().color($r('app.color.line_grey'))
               SliderCustom({name:'offset_dy',value:$offset_dy,min:-200,max:200})
               Divider().color($r('app.color.line_grey'))

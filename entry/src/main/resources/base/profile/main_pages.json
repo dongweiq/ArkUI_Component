@@ -44,6 +44,11 @@
     "pages/container/SideBarContainerPage",
     "pages/container/SwiperPage",
     "pages/container/TabsPage",
-    "pages/pop/AlertDialogPage"
+    "pages/dialog/AlertDialogPage",
+    "pages/dialog/ActionSheetPage",
+    "pages/dialog/CustomDialogPage",
+    "pages/dialog/DatePickerDialogPage",
+    "pages/dialog/TimePickerDialogPage",
+    "pages/dialog/TextPickerDialogPage"
   ]
 }

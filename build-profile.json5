@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.cer",
+          "storePassword": "0000001B6F3EBEBD8C552F3988BA437575501ADC0517A61C74B3A2D5FC1DEE95873A24474AB166D49B3653",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BA082BF0D0EA8988A52EF419CEC9E99BE3B4D5C43FC21421A2E388BF8E59ABC4EE3E4F0A4B1E248",
+          "profile": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [
