@@ -86,7 +86,7 @@ struct DatePickerPage {
   }
 
   changeHandle(value: DatePickerResult) {
-    this.date = `${value.year}年${value.month}月${value.day}日`
+    this.date = `${value.year}年${value.month + 1}月${value.day}日`
   }
 }
 

@@ -10,7 +10,7 @@ struct SelectPage {
 
   @Builder pageTitle() {
     Column() {
-      Title({ pageTitle: 'Button 按钮' })
+      Title({ pageTitle: 'Select 下拉选择' })
       TitleTab({ selectTab: $selectTab, interface: false, property: true, common: true })
     }
     .width('100%')

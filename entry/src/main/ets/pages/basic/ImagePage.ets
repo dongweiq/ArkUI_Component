@@ -53,19 +53,6 @@ struct ImagePage {
     { value: 'Template' }
   ]
 
-  //copyOption
-  @State selectCopyOption: CopyOptions = CopyOptions.None
-  @State copyOptionList: CopyOptions[] = [
-  CopyOptions.None,
-  CopyOptions.InApp,
-  CopyOptions.LocalDevice
-  ]
-  @State copyOptionValueList: { value: string }[] = [
-    { value: 'None' },
-    { value: 'InApp' },
-    { value: 'LocalDevice' }
-  ]
-
   //width
   @State widthValue: number = 300
 
@@ -94,7 +81,6 @@ struct ImagePage {
               .objectFit(this.selectObjectFit)
               .objectRepeat(this.selectObjectRepeat)
               .renderMode(this.selectRenderMode)
-              .copyOption(this.selectCopyOption)
           }
 
 
@@ -124,14 +110,6 @@ struct ImagePage {
                 itemsList: $renderModeList,
                 valuesList: $renderModeValueList,
                 selectItem: $selectRenderMode
-              })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SelectCustom({
-                name: 'copyOption',
-                itemsList: $copyOptionList,
-                valuesList: $copyOptionValueList,
-                selectItem: $selectCopyOption
               })
             }
             .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)

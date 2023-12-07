@@ -31,7 +31,7 @@ struct MarqueePage {
   @State widthValue: number = 300
 
   //height
-  @State heightValue: number = 300
+  private heightValue: number = 300
 
   @Builder pageTitle() {
     Column() {
@@ -55,6 +55,7 @@ struct MarqueePage {
               fromStart: this.fromStart,
               src: this.src
             })
+              .width(this.widthValue)
               .allowScale(this.allowScale)
 
           }
@@ -88,10 +89,7 @@ struct MarqueePage {
 
             // tab 2
             Column() {
-              SliderCustom({ value: $widthValue, name: 'width', min: 200, max: 350 })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SliderCustom({ value: $heightValue, name: 'height', min: 10, max: 350 })
+              SliderCustom({ value: $widthValue, name: 'width', min: 100, max: 350 })
             }
             .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
 

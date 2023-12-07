@@ -23,7 +23,7 @@ struct LoadingProgressPage {
   @State widthValue: number = 48
 
   //height
-  @State heightValue: number = 48
+  private heightValue: number = 200
 
   @Builder pageTitle() {
     Column() {
@@ -64,9 +64,7 @@ struct LoadingProgressPage {
             // tab 2
             Column() {
               SliderCustom({ value: $widthValue, name: 'width', min: 24, max: 100 })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SliderCustom({ value: $heightValue, name: 'height', min: 24, max: 100 })
+
             }
             .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
 

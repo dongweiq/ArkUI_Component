@@ -2,15 +2,15 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "ArkUI Component Demo"
     },
     {
       "name": "EntryAbility_desc",
-      "value": "description"
+      "value": "ArkUI Component Demo"
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "ArkUI Component Demo"
     }
   ]
 }

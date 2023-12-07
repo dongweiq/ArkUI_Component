@@ -2,7 +2,6 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
-import SwitchCustom from '../../component/controller/SwitchCustom'
 
 @Entry
 @Component
@@ -73,7 +72,7 @@ struct TogglePage {
 
   @Builder pageTitle() {
     Column() {
-      Title({ pageTitle: 'aaa bbb' })
+      Title({ pageTitle: 'Toggle 开关' })
       TitleTab({ selectTab: $selectTab, interface: true, property: true, common: true })
     }
     .width('100%')

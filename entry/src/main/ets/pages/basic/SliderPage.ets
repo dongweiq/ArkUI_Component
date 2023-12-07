@@ -148,7 +148,7 @@ struct SliderPage {
               .onChange((value: number, _) => {
                 this.value = value
               })
-            Text(`value : ${this.value}`)
+            Text(`value : ${Math.floor(this.value)}`)
               .fontColor($r('app.color.font_normal'))
           }
 

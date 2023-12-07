@@ -23,8 +23,6 @@ struct GaugePage {
   //width
   @State widthValue: number = 300
 
-  //height
-  @State heightValue: number = 300
 
   @Builder pageTitle() {
     Column() {
@@ -48,7 +46,7 @@ struct GaugePage {
               .colors([[Color.Black, 20], [Color.Blue, 20], [Color.Red, 20], [Color.Green, 20]])
               .strokeWidth(this.strokeWidth)
               .width(this.widthValue)
-              .height(this.heightValue)
+
           }
 
 
@@ -56,9 +54,6 @@ struct GaugePage {
           Column() {
             // tab 0
             Column() {
-              SliderCustom({ value: $value, name: 'value', min: 0, max: 100 })
-              Divider()
-                .color($r('app.color.line_grey'))
               SliderCustom({ value: $min, name: 'min', min: 0, max: 100 })
               Divider()
                 .color($r('app.color.line_grey'))
@@ -86,9 +81,6 @@ struct GaugePage {
             // tab 2
             Column() {
               SliderCustom({ value: $widthValue, name: 'width', min: 100, max: 350 })
-              Divider()
-                .color($r('app.color.line_grey'))
-              SliderCustom({ value: $heightValue, name: 'height', min: 100, max: 350 })
             }
             .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
 

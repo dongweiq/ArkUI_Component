@@ -31,8 +31,9 @@ struct QRCodePage {
   ]
 
   //backgroundColor
-  @State selectBackgroundColor: Color = Color.Gray
+  @State selectBackgroundColor: Color = Color.White
   @State backgroundColorList: Color[] = [
+  Color.White,
   Color.Gray,
   Color.Black,
   Color.Blue,
@@ -41,6 +42,7 @@ struct QRCodePage {
   Color.Orange
   ]
   @State backgroundColorValueList: { value: string }[] = [
+    { value: 'White' },
     { value: 'Gray' },
     { value: 'Black' },
     { value: 'Blue' },
