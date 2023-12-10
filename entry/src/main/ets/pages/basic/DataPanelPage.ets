@@ -57,9 +57,7 @@ struct DataPanelPage {
                 .backgroundColor($r('app.color.start_window_background'))
                 .onClick(() => this.refreshData())
             }
-
           }
-
 
           Blank()
           Column() {

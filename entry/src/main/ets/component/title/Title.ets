@@ -24,7 +24,6 @@ export default struct Title {
         .justifyContent(FlexAlign.Center)
         .onClick(()=>{router.back()})
 
-
         Blank()
       }
       .width('100%')

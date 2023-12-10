@@ -9,7 +9,14 @@ struct CheckboxPage {
   @State selectTab: number = 1
   //color
   @State selectColor: Color = Color.Black
-  @State colorList: Color[] = [Color.Black, Color.Blue, Color.Brown, Color.Green, Color.Orange, Color.Grey]
+  @State colorList: Color[] = [
+  Color.Black,
+  Color.Blue,
+  Color.Brown,
+  Color.Green,
+  Color.Orange,
+  Color.Grey
+  ]
   @State colorValueList: { value: string }[] = [
     { value: 'Black' },
     { value: 'Blue' },

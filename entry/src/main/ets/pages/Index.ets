@@ -1,15 +1,16 @@
-import router from '@ohos.router';
 import basicCom from '../bean/basicCom'
 import infoCom from '../bean/infoCom'
 import inputCom from '../bean/inputCom'
 import funcCom from '../bean/funcCom'
 import containCom from '../bean/containCom'
 import dialogCom from '../bean/dialogCom'
-import ListTitle from '../component/title/ListTitle'
+import ListTitle from '../component/list/ListTitle'
+import ListItemCustom from '../component/list/ListItemCustom'
 
 @Entry
 @Component
 struct Index {
+
   build() {
 
     Column() {
@@ -35,20 +36,7 @@ struct Index {
           address: string
         }) => {
           ListItem() {
-            Column() {
-              Text(item.name)
-                .fontSize(16)
-                .margin({ left: 8 })
-                .fontColor($r('app.color.font_normal'))
-            }
-            .onClick(() => {
-              onJumpClick(item.address)
-            })
-            .alignItems(HorizontalAlign.Start)
-            .padding(8)
-            .width('100%')
-            .backgroundColor(Color.White)
-            .borderRadius(8)
+            ListItemCustom({ name: item.name as string, address: item.address as string })
           }
         })
 
@@ -62,20 +50,7 @@ struct Index {
           address: string
         }) => {
           ListItem() {
-            Column() {
-              Text(item.name)
-                .fontSize(16)
-                .margin({ left: 8 })
-                .fontColor($r('app.color.font_normal'))
-            }
-            .onClick(() => {
-              onJumpClick(item.address)
-            })
-            .alignItems(HorizontalAlign.Start)
-            .padding(8)
-            .width('100%')
-            .backgroundColor(Color.White)
-            .borderRadius(8)
+            ListItemCustom({ name: item.name as string, address: item.address as string })
           }
         })
 
@@ -89,20 +64,7 @@ struct Index {
           address: string
         }) => {
           ListItem() {
-            Column() {
-              Text(item.name)
-                .fontSize(16)
-                .margin({ left: 8 })
-                .fontColor($r('app.color.font_normal'))
-            }
-            .onClick(() => {
-              onJumpClick(item.address)
-            })
-            .alignItems(HorizontalAlign.Start)
-            .padding(8)
-            .width('100%')
-            .backgroundColor(Color.White)
-            .borderRadius(8)
+            ListItemCustom({ name: item.name as string, address: item.address as string })
           }
         })
 
@@ -116,20 +78,7 @@ struct Index {
           address: string
         }) => {
           ListItem() {
-            Column() {
-              Text(item.name)
-                .fontSize(16)
-                .margin({ left: 8 })
-                .fontColor($r('app.color.font_normal'))
-            }
-            .onClick(() => {
-              onJumpClick(item.address)
-            })
-            .alignItems(HorizontalAlign.Start)
-            .padding(8)
-            .width('100%')
-            .backgroundColor(Color.White)
-            .borderRadius(8)
+            ListItemCustom({ name: item.name as string, address: item.address as string })
           }
         })
 
@@ -143,20 +92,7 @@ struct Index {
           address: string
         }) => {
           ListItem() {
-            Column() {
-              Text(item.name)
-                .fontSize(16)
-                .margin({ left: 8 })
-                .fontColor($r('app.color.font_normal'))
-            }
-            .onClick(() => {
-              onJumpClick(item.address)
-            })
-            .alignItems(HorizontalAlign.Start)
-            .padding(8)
-            .width('100%')
-            .backgroundColor(Color.White)
-            .borderRadius(8)
+            ListItemCustom({ name: item.name as string, address: item.address as string })
           }
         })
 
@@ -170,20 +106,7 @@ struct Index {
           address: string
         }) => {
           ListItem() {
-            Column() {
-              Text(item.name)
-                .fontSize(16)
-                .margin({ left: 8 })
-                .fontColor($r('app.color.font_normal'))
-            }
-            .onClick(() => {
-              onJumpClick(item.address)
-            })
-            .alignItems(HorizontalAlign.Start)
-            .padding(8)
-            .width('100%')
-            .backgroundColor(Color.White)
-            .borderRadius(8)
+            ListItemCustom({ name: item.name as string, address: item.address as string })
           }
         })
 
@@ -197,16 +120,4 @@ struct Index {
     .backgroundColor($r('app.color.background_grey'))
 
   }
-}
-
-function onJumpClick(src: string): void {
-  router.pushUrl({
-    url: src
-  }, router.RouterMode.Standard, (err) => {
-    if (err) {
-      console.error(`Invoke pushUrl failed, code is ${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info('Invoke pushUrl succeeded.');
-  });
 }

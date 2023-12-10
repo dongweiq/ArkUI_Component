@@ -11,7 +11,11 @@ struct ButtonPage {
 
   //type
   @State type: ButtonType = ButtonType.Capsule
-  @State typeArr: ButtonType[] = [ButtonType.Capsule, ButtonType.Circle, ButtonType.Normal]
+  @State typeArr: ButtonType[] = [
+  ButtonType.Capsule,
+  ButtonType.Circle,
+  ButtonType.Normal
+  ]
   @State typeValueArr: { value: string }[] = [
     { value: 'Capsule' },
     { value: 'Circle' },
