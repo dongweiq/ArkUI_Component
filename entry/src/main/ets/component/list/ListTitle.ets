@@ -8,6 +8,7 @@ export default struct ListTitle{
       Rect()
         .width(4)
         .height(16)
+        .radius(2)
         .fill($r('app.color.brand'))
         .margin({right:8})
       Text(this.title)

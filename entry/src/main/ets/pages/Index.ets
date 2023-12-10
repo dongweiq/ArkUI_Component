@@ -117,7 +117,7 @@ struct Index {
     }
     .padding(20)
     .width('100%')
-    .backgroundColor($r('app.color.background_grey'))
+    .backgroundColor($r('app.color.start_window_background'))
 
   }
 }

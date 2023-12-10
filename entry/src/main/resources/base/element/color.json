@@ -13,6 +13,10 @@
       "value": "#eeeeee"
     },
     {
+      "name": "line_grey_light",
+      "value": "#B8B8B8"
+    },
+    {
       "name": "brand",
       "value": "#0a59f7"
     },
@@ -27,6 +31,10 @@
     {
       "name": "font_light",
       "value": "#999999"
+    },
+    {
+      "name": "list_item",
+      "value": "#F9FAFC"
     }
   ]
 }

@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "storePassword": "0000001C18E0EE40D1ADFC7F91D0B05DC58ADC9F888EA738659C647AC56FCAA3C602F709E0EE1864A1FAAC6C",
-          "certpath": "/Users/jiazeyu/Documents/harmonyappkeys/arkuiRelease/arkuirelease.cer",
-          "keyAlias": "releasekey",
-          "keyPassword": "0000001C32E288A746EBE8BBA3B5CB7D85C8132277BFF065CDE5BF8CD68BA8E277E732453534C0BD3A76CDCA",
-          "profile": "/Users/jiazeyu/Documents/harmonyappkeys/arkuiRelease/releaseRelease.p7b",
+          "certpath": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.cer",
+          "storePassword": "0000001B93D8B9D37AC189665E5E24953A4316C049934C4FC65C42BDB713191E674ECFF03E924639BF62A6",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B899C5D6FA9DEB42699A72C9ED292B4E8A11EC7AB1EBBD1E03976574B3ACD7987DC8732408EB315",
+          "profile": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "/Users/jiazeyu/Documents/harmonyappkeys/arkuiRelease/arkuiReleaseKey.p12"
+          "storeFile": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.p12"
         }
       }
     ],

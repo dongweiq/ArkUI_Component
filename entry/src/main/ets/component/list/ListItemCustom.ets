@@ -7,10 +7,26 @@ export default struct ListItemCustom {
 
   build() {
     Column() {
-      Text(this.name)
-        .fontSize(16)
-        .margin({ left: 8 })
-        .fontColor($r('app.color.font_normal'))
+      Row() {
+        Text(this.name)
+          .fontSize(16)
+          .margin({ left: 8 })
+          .fontColor($r('app.color.font_normal'))
+        Blank()
+        Image($r('app.media.ic_public_arrow_left_filled'))
+          .height(16)
+          .rotate({
+            x: 0,
+            y: 1,
+            z: 0,
+            centerX: '50%',
+            centerY: '50%',
+            angle: 180
+          })
+          .fillColor($r('app.color.line_grey_light'))
+      }
+      .width('100%')
+
     }
     .onClick(() => {
       onJumpClick(this.address)
@@ -18,7 +34,9 @@ export default struct ListItemCustom {
     .alignItems(HorizontalAlign.Start)
     .padding(8)
     .width('100%')
-    .backgroundColor(Color.White)
+    .height(40)
+    .justifyContent(FlexAlign.Center)
+    .backgroundColor($r('app.color.list_item'))
     .borderRadius(8)
   }
 }
