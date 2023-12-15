@@ -9,7 +9,7 @@ struct SearchPage {
   @State selectTab: number = 1
   //color
   @State selectColor: Color = Color.Grey
-  @State colorList: Color[] = [, Color.Grey, Color.Black, Color.Blue, Color.Brown, Color.Green, Color.Orange]
+  @State colorList: Color[] = [Color.Grey, Color.Black, Color.Blue, Color.Brown, Color.Green, Color.Orange]
   @State colorValueList: { value: string }[] = [
     { value: 'Grey' },
     { value: 'Black' },
