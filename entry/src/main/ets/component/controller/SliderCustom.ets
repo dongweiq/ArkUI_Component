@@ -4,6 +4,7 @@ export default struct SelectCustom {
   @Link value: number
   @Prop min: number
   @Prop max: number
+  private step? : number
 
   build() {
     Column() {
@@ -12,7 +13,7 @@ export default struct SelectCustom {
           .fontColor($r('app.color.font_main'))
         Blank()
 
-        Slider({ value: this.value, min: this.min, max: this.max, step: 1 })
+        Slider({ value: this.value, min: this.min, max: this.max, step: this.step ? this.step : 1 })
           .blockColor($r('app.color.start_window_background'))
           .selectedColor($r('app.color.brand'))
           .onChange((value: number, _) => {

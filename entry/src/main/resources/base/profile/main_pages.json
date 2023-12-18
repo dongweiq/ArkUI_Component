@@ -49,6 +49,7 @@
     "pages/dialog/CustomDialogPage",
     "pages/dialog/DatePickerDialogPage",
     "pages/dialog/TimePickerDialogPage",
-    "pages/dialog/TextPickerDialogPage"
+    "pages/dialog/TextPickerDialogPage",
+    "pages/draw/CirclePage"
   ]
 }
