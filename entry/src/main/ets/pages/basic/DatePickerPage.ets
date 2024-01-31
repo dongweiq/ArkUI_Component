@@ -8,17 +8,15 @@ import SliderCustom from '../../component/controller/SliderCustom'
 struct DatePickerPage {
   @State selectTab: number = 1
   @State date: string = '选择日期'
-
   //lunar
   @State lunar: boolean = false
-
   //width
   @State widthValue: number = 300
-
   //height
   @State heightValue: number = 200
 
-  @Builder pageTitle() {
+  @Builder
+  pageTitle() {
     Column() {
       Title({ pageTitle: 'DatePicker 日期选择' })
       TitleTab({ selectTab: $selectTab, interface: false, property: true, common: true })
@@ -35,7 +33,7 @@ struct DatePickerPage {
           Column() {
             DatePicker()
               .lunar(this.lunar)
-              .onChange((value: DatePickerResult) => {
+              .onDateChange(value => {
                 this.changeHandle(value)
               })
               .width(this.widthValue)
@@ -85,8 +83,9 @@ struct DatePickerPage {
     .backgroundColor($r('app.color.background_grey'))
   }
 
-  changeHandle(value: DatePickerResult) {
-    this.date = `${value.year}年${value.month + 1}月${value.day}日`
+  changeHandle(value: Date) {
+
+    this.date = `${value.getFullYear()}年${value.getMonth()  + 1}月${value.getDay()}日`
   }
 }
 

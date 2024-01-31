@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -18,7 +19,7 @@ struct ImagePage {
   ImageFit.ScaleDown,
   ImageFit.None
   ]
-  @State objectFitValueList: { value: string }[] = [
+  @State objectFitValueList: Array<ValueObject> = [
     { value: 'Auto' },
     { value: 'Contain' },
     { value: 'Cover' },
@@ -35,7 +36,7 @@ struct ImagePage {
   ImageRepeat.Y,
   ImageRepeat.XY
   ]
-  @State objectRepeatValueList: { value: string }[] = [
+  @State objectRepeatValueList: Array<ValueObject> = [
     { value: 'NoRepeat' },
     { value: 'X' },
     { value: 'Y' },
@@ -48,7 +49,7 @@ struct ImagePage {
   ImageRenderMode.Original,
   ImageRenderMode.Template
   ]
-  @State renderModeValueList: { value: string }[] = [
+  @State renderModeValueList: Array<ValueObject> = [
     { value: 'Original' },
     { value: 'Template' }
   ]

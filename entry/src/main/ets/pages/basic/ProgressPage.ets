@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -24,7 +25,7 @@ struct ProgressPage {
   ProgressType.ScaleRing,
   ProgressType.Capsule
   ]
-  @State typeValueList: { value: string }[] = [
+  @State typeValueList: Array<ValueObject> = [
     { value: 'Linear' },
     { value: 'Ring' },
     { value: 'Eclipse' },
@@ -43,7 +44,7 @@ struct ProgressPage {
   Color.Orange,
   Color.Grey
   ]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'Blue' },
     { value: 'Black' },
     { value: 'Brown' },
@@ -62,7 +63,7 @@ struct ProgressPage {
   Color.Green,
   Color.Orange
   ]
-  @State backgroundColorValueList: { value: string }[] = [
+  @State backgroundColorValueList: Array<ValueObject> = [
     { value: 'Gray' },
     { value: 'Black' },
     { value: 'Blue' },

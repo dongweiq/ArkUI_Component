@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
+import { ValueObject } from './ButtonPage'
 
 
 @Entry
@@ -19,7 +20,7 @@ struct DataPanelPage {
   //type
   @State type: DataPanelType = DataPanelType.Circle
   @State typeList: DataPanelType[] = [DataPanelType.Circle, DataPanelType.Line]
-  @State typeValueList: { value: string }[] = [{ value: 'Circle' }, { value: 'Line' }]
+  @State typeValueList: Array<ValueObject> = [{ value: 'Circle' }, { value: 'Line' }]
 
   //closeEffect
   @State closeEffect: boolean = false

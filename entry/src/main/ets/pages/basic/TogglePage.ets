@@ -2,38 +2,36 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
 struct TogglePage {
   @State selectTab: number = 0
-
-  @State isOn : boolean = true
-
+  @State isOn: boolean = true
   //type
   @State type: ToggleType = ToggleType.Switch
   @State typeList: ToggleType[] = [
-  ToggleType.Switch,
-  ToggleType.Checkbox,
-  ToggleType.Button
+    ToggleType.Switch,
+    ToggleType.Checkbox,
+    ToggleType.Button
   ]
-  @State typeValueList: { value: string }[] = [
+  @State typeValueList: Array<ValueObject> = [
     { value: 'Switch' },
     { value: 'Checkbox' },
     { value: 'Button' },
   ]
-
   //selectedColor
   @State selectedColor: Color = Color.Grey
   @State selectedColorList: Color[] = [
-  Color.Grey,
-  Color.Blue,
-  Color.Black,
-  Color.Brown,
-  Color.Green,
-  Color.Orange
+    Color.Grey,
+    Color.Blue,
+    Color.Black,
+    Color.Brown,
+    Color.Green,
+    Color.Orange
   ]
-  @State selectedColorValueList: { value: string }[] = [
+  @State selectedColorValueList: Array<ValueObject> = [
     { value: 'Grey' },
     { value: 'Blue' },
     { value: 'Black' },
@@ -41,19 +39,18 @@ struct TogglePage {
     { value: 'Green' },
     { value: 'Orange' }
   ]
-
   //switchPointColor
   @State switchPointColor: Color = Color.White
   @State switchPointColorList: Color[] = [
-  Color.White,
-  Color.Grey,
-  Color.Blue,
-  Color.Black,
-  Color.Brown,
-  Color.Green,
-  Color.Orange
+    Color.White,
+    Color.Grey,
+    Color.Blue,
+    Color.Black,
+    Color.Brown,
+    Color.Green,
+    Color.Orange
   ]
-  @State switchPointColorValueList: { value: string }[] = [
+  @State switchPointColorValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Grey' },
     { value: 'Blue' },
@@ -62,15 +59,13 @@ struct TogglePage {
     { value: 'Green' },
     { value: 'Orange' }
   ]
-
-
   //width
   @State widthValue: number = 72
-
   //height
   @State heightValue: number = 30
 
-  @Builder pageTitle() {
+  @Builder
+  pageTitle() {
     Column() {
       Title({ pageTitle: 'Toggle 开关' })
       TitleTab({ selectTab: $selectTab, interface: true, property: true, common: true })
@@ -85,12 +80,12 @@ struct TogglePage {
         Column() {
           Blank()
           Column() {
-            Toggle({type:this.type,isOn:this.isOn})
+            Toggle({ type: this.type, isOn: this.isOn })
               .selectedColor(this.selectedColor)
               .switchPointColor(this.switchPointColor)
               .width(this.widthValue)
               .height(this.heightValue)
-              .onChange((isOn:boolean)=>{
+              .onChange((isOn: boolean) => {
                 this.isOn = isOn
               })
           }
@@ -102,10 +97,10 @@ struct TogglePage {
             // tab 0
             Column() {
               SelectCustom({
-                name:'type',
-                selectItem:$type,
-                itemsList:$typeList,
-                valuesList:$typeValueList
+                name: 'type',
+                selectItem: $type,
+                itemsList: $typeList,
+                valuesList: $typeValueList
               })
             }
             .visibility(this.selectTab === 0 ? Visibility.Visible : Visibility.None)
@@ -113,16 +108,16 @@ struct TogglePage {
             // tab 1
             Column() {
               SelectCustom({
-                name:'selectedColor',
-                selectItem:$selectedColor,
-                itemsList:$selectedColorList,
-                valuesList:$selectedColorValueList
+                name: 'selectedColor',
+                selectItem: $selectedColor,
+                itemsList: $selectedColorList,
+                valuesList: $selectedColorValueList
               })
               SelectCustom({
-                name:'switchPointColor',
-                selectItem:$switchPointColor,
-                itemsList:$switchPointColorList,
-                valuesList:$switchPointColorValueList
+                name: 'switchPointColor',
+                selectItem: $switchPointColor,
+                itemsList: $switchPointColorList,
+                valuesList: $switchPointColorValueList
               })
             }
             .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)

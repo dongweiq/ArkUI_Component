@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
@@ -16,7 +17,7 @@ struct FlexPage {
   FlexDirection.Column,
   FlexDirection.ColumnReverse,
   ]
-  @State directValueList: { value: string }[] = [
+  @State directValueList: Array<ValueObject> = [
     { value: 'Row' },
     { value: 'RowReverse' },
     { value: 'Column' },
@@ -30,7 +31,7 @@ struct FlexPage {
   FlexWrap.Wrap,
   FlexWrap.WrapReverse
   ]
-  @State wrapValueList: { value: string }[] = [
+  @State wrapValueList: Array<ValueObject> = [
     { value: 'NoWrap' },
     { value: 'Wrap' },
     { value: 'WrapReverse' }
@@ -46,7 +47,7 @@ struct FlexPage {
   FlexAlign.SpaceAround,
   FlexAlign.SpaceEvenly
   ]
-  @State justifyContentValueList: { value: string }[] = [
+  @State justifyContentValueList: Array<ValueObject> = [
     { value: 'Center' },
     { value: 'Start' },
     { value: 'End' },
@@ -65,7 +66,7 @@ struct FlexPage {
   ItemAlign.Stretch,
   ItemAlign.Baseline
   ]
-  @State alignItemsValueList: { value: string }[] = [
+  @State alignItemsValueList: Array<ValueObject> = [
     { value: 'Center' },
     { value: 'Start' },
     { value: 'End' },
@@ -84,7 +85,7 @@ struct FlexPage {
   FlexAlign.SpaceAround,
   FlexAlign.SpaceEvenly
   ]
-  @State alignContentValueList: { value: string }[] = [
+  @State alignContentValueList: Array<ValueObject> = [
     { value: 'Center' },
     { value: 'Start' },
     { value: 'End' },

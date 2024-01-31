@@ -10,14 +10,14 @@ struct CheckboxPage {
   //color
   @State selectColor: Color = Color.Black
   @State colorList: Color[] = [
-  Color.Black,
-  Color.Blue,
-  Color.Brown,
-  Color.Green,
-  Color.Orange,
-  Color.Grey
+    Color.Black,
+    Color.Blue,
+    Color.Brown,
+    Color.Green,
+    Color.Orange,
+    Color.Grey
   ]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'Black' },
     { value: 'Blue' },
     { value: 'Brown' },
@@ -25,11 +25,11 @@ struct CheckboxPage {
     { value: 'Orange' },
     { value: 'Grey' }
   ]
-
   //width
   @State widthValue: number = 24
 
-  @Builder pageTitle() {
+  @Builder
+  pageTitle() {
     Column() {
       Title({ pageTitle: 'CheckBox 多选框' })
       TitleTab({ selectTab: $selectTab, interface: false, property: true, common: true })
@@ -82,8 +82,9 @@ struct CheckboxPage {
               })
             }
             .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
+
             //tab 2
-            Column(){
+            Column() {
               SliderCustom({ name: 'width', value: $widthValue, min: 12, max: 48 })
             }
             .visibility(this.selectTab === 2 ? Visibility.Visible : Visibility.None)
@@ -109,4 +110,9 @@ struct CheckboxPage {
     .width('100%')
     .backgroundColor($r('app.color.background_grey'))
   }
+}
+
+
+export class ValueObject {
+  value: string = ''
 }

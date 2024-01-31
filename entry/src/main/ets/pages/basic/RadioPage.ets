@@ -1,6 +1,7 @@
 import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -16,7 +17,7 @@ struct RadioPage {
   Color.Orange,
   Color.Grey
   ]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'Black' },
     { value: 'Blue' },
     { value: 'Brown' },

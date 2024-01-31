@@ -4,8 +4,8 @@ import Title from '../../component/title/Title'
 @CustomDialog
 struct CustomDialogExample {
   controller : CustomDialogController
-  cancel: () => void
-  confirm: () => void
+  cancel?: () => void
+  confirm?: () => void
 
   build(){
     Column(){

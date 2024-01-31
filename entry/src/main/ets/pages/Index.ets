@@ -6,6 +6,7 @@ import containCom from '../bean/containCom'
 import dialogCom from '../bean/dialogCom'
 import ListTitle from '../component/list/ListTitle'
 import ListItemCustom from '../component/list/ListItemCustom'
+import { NameAddressObj } from '../bean/NameAddressObj'
 
 @Entry
 @Component
@@ -31,10 +32,7 @@ struct Index {
           ListTitle({ title: '基础组件' })
         }
 
-        ForEach(basicCom, (item: {
-          name: string,
-          address: string
-        }) => {
+        ForEach(basicCom, (item: NameAddressObj) => {
           ListItem() {
             ListItemCustom({ name: item.name as string, address: item.address as string })
           }
@@ -45,10 +43,7 @@ struct Index {
           ListTitle({ title: '信息展示' })
         }
 
-        ForEach(infoCom, (item: {
-          name: string,
-          address: string
-        }) => {
+        ForEach(infoCom, (item: NameAddressObj) => {
           ListItem() {
             ListItemCustom({ name: item.name as string, address: item.address as string })
           }
@@ -59,10 +54,7 @@ struct Index {
           ListTitle({ title: '信息输入' })
         }
 
-        ForEach(inputCom, (item: {
-          name: string,
-          address: string
-        }) => {
+        ForEach(inputCom, (item: NameAddressObj) => {
           ListItem() {
             ListItemCustom({ name: item.name as string, address: item.address as string })
           }
@@ -73,10 +65,7 @@ struct Index {
           ListTitle({ title: '功能控件' })
         }
 
-        ForEach(funcCom, (item: {
-          name: string,
-          address: string
-        }) => {
+        ForEach(funcCom, (item: NameAddressObj) => {
           ListItem() {
             ListItemCustom({ name: item.name as string, address: item.address as string })
           }
@@ -87,10 +76,7 @@ struct Index {
           ListTitle({ title: '容器' })
         }
 
-        ForEach(containCom, (item: {
-          name: string,
-          address: string
-        }) => {
+        ForEach(containCom, (item: NameAddressObj) => {
           ListItem() {
             ListItemCustom({ name: item.name as string, address: item.address as string })
           }
@@ -101,10 +87,7 @@ struct Index {
           ListTitle({ title: '弹窗' })
         }
 
-        ForEach(dialogCom, (item: {
-          name: string,
-          address: string
-        }) => {
+        ForEach(dialogCom, (item: NameAddressObj) => {
           ListItem() {
             ListItemCustom({ name: item.name as string, address: item.address as string })
           }

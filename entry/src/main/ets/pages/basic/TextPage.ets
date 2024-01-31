@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -15,7 +16,7 @@ struct TextPage {
   TextAlign.Start,
   TextAlign.End
   ]
-  @State textAlignValueList : { value: string }[] = [
+  @State textAlignValueList : Array<ValueObject> = [
     { value: 'Center' },
     { value: 'Start' },
     { value: 'End' }
@@ -31,7 +32,7 @@ struct TextPage {
   TextOverflow.Clip,
   TextOverflow.Ellipsis,
   ]
-  @State textOverflowValueList: { value: string }[] = [
+  @State textOverflowValueList: Array<ValueObject> = [
     { value: 'None' },
     { value: 'Clip' },
     { value: 'Ellipsis' }
@@ -46,7 +47,7 @@ struct TextPage {
   TextDecorationType.LineThrough,
   TextDecorationType.None
   ]
-  @State typeValueList: { value: string }[] = [
+  @State typeValueList: Array<ValueObject> = [
     { value: 'Underline' },
     { value: 'Overline' },
     { value: 'LineThrough' },
@@ -63,7 +64,7 @@ struct TextPage {
   Color.Orange,
   Color.Grey
   ]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'Blue' },
     { value: 'Black' },
     { value: 'Brown' },
@@ -85,7 +86,7 @@ struct TextPage {
   TextCase.LowerCase,
   TextCase.UpperCase,
   ]
-  @State textCaseValueList: { value: string }[] = [
+  @State textCaseValueList: Array<ValueObject> = [
     { value: 'Normal' },
     { value: 'LowerCase' },
     { value: 'UpperCase' }

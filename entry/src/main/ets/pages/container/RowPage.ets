@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
@@ -18,7 +19,7 @@ struct RowPage {
   VerticalAlign.Top,
   VerticalAlign.Bottom
   ]
-  @State alignItemsValueList: { value: string }[] = [
+  @State alignItemsValueList: Array<ValueObject> = [
     { value: 'Center' },
     { value: 'Top' },
     { value: 'Bottom' },
@@ -34,7 +35,7 @@ struct RowPage {
   FlexAlign.SpaceAround,
   FlexAlign.SpaceEvenly
   ]
-  @State justifyContentValueList: { value: string }[] = [
+  @State justifyContentValueList: Array<ValueObject> = [
     { value: 'Center' },
     { value: 'Start' },
     { value: 'End' },

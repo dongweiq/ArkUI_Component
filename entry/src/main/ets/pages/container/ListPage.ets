@@ -2,12 +2,12 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
 struct ListPage {
   @State selectTab: number = 0
-
   //element
   @State @Watch('onNumberChange') listNumber: number = 3
   @State listValue: string[] = ['1', '2', '3']
@@ -21,25 +21,23 @@ struct ListPage {
 
   //space
   @State space: number = 0
-
   //listDirection
-  @State listDirection : Axis = Axis.Vertical
-  @State listDirectionList : Axis[] = [
+  @State listDirection: Axis = Axis.Vertical
+  @State listDirectionList: Axis[] = [
     Axis.Vertical,
     Axis.Horizontal
   ]
-  @State listDirectionValueList : {value :string }[] = [
-    {value:'Vertical'},
-    {value:'Horizontal'}
+  @State listDirectionValueList: Array<ValueObject> = [
+    { value: 'Vertical' },
+    { value: 'Horizontal' }
   ]
-
   //width
   @State widthValue: number = 200
-
   //height
   @State heightValue: number = 200
 
-  @Builder pageTitle() {
+  @Builder
+  pageTitle() {
     Column() {
       Title({ pageTitle: 'List 列表' })
       TitleTab({ selectTab: $selectTab, interface: true, property: true, common: true })
@@ -67,7 +65,7 @@ struct ListPage {
             })
             .margin({ bottom: 15 })
 
-            List({space:this.space}) {
+            List({ space: this.space }) {
               ForEach(this.listValue, (value: string) => {
                 ListItem() {
                   Row() {
@@ -94,13 +92,14 @@ struct ListPage {
               SliderCustom({ name: 'space', value: $space, min: 0, max: 30 })
             }
             .visibility(this.selectTab === 0 ? Visibility.Visible : Visibility.None)
+
             // tab 1
             Column() {
               SelectCustom({
-                name:'listDirection',
-                selectItem:$listDirection,
-                itemsList:$listDirectionList,
-                valuesList:$listDirectionValueList
+                name: 'listDirection',
+                selectItem: $listDirection,
+                itemsList: $listDirectionList,
+                valuesList: $listDirectionValueList
               })
             }
             .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)

@@ -1,45 +1,75 @@
-const containCom: {
-  name: string,
-  address: string
-}[] = [
-  { name: 'Column 垂直容器',
-    address: 'pages/container/ColumnPage' },
+import { NameAddressObj } from './NameAddressObj'
 
-  { name: 'Row 水平容器',
-    address: 'pages/container/RowPage' },
+const containCom: Array<NameAddressObj> = [
+  {
+    name: 'Column 垂直容器',
+    address: 'pages/container/ColumnPage'
+  },
 
-  { name: 'Stack 堆叠容器',
-    address: 'pages/container/StackPage' },
+  {
+    name: 'Row 水平容器',
+    address: 'pages/container/RowPage'
+  },
 
-  { name: 'Flex 弹性布局',
-    address: 'pages/container/FlexPage' },
+  {
+    name: 'Stack 堆叠容器',
+    address: 'pages/container/StackPage'
+  },
 
-  { name: 'List 列表容器',
-    address: 'pages/container/ListPage' },
+  {
+    name: 'Flex 弹性布局',
+    address: 'pages/container/FlexPage'
+  },
 
-  { name: 'Grid 网格容器',
-    address: 'pages/container/GridPage' },
+  {
+    name: 'List 列表容器',
+    address: 'pages/container/ListPage'
+  },
 
-  { name: 'Swiper 滑块视图',
-    address: 'pages/container/SwiperPage' },
+  {
+    name: 'Grid 网格容器',
+    address: 'pages/container/GridPage'
+  },
 
-  { name: 'Tabs 页签',
-    address: 'pages/container/TabsPage' },
+  {
+    name: 'Swiper 滑块视图',
+    address: 'pages/container/SwiperPage'
+  },
 
-  { name: 'Badge 信息标记',
-    address: 'pages/container/BadgePage' },
+  {
+    name: 'Tabs 页签',
+    address: 'pages/container/TabsPage'
+  },
 
-  { name: 'Counter 计数器',
-    address: 'pages/container/CounterPage' },
+  {
+    name: 'Badge 信息标记',
+    address: 'pages/container/BadgePage'
+  },
 
-  { name: 'Panel 滑动面板',
-    address: 'pages/container/PanelPage' },
+  {
+    name: 'Counter 计数器',
+    address: 'pages/container/CounterPage'
+  },
 
-  { name: 'Scroll 滚动容器',
-    address: 'pages/container/ScrollPage' },
+  {
+    name: 'Panel 滑动面板',
+    address: 'pages/container/PanelPage'
+  },
 
-  { name: 'SideBarContainer 侧边栏',
-    address: 'pages/container/SideBarContainerPage' },
+  {
+    name: 'Scroll 滚动容器',
+    address: 'pages/container/ScrollPage'
+  },
+
+  {
+    name: 'SideBarContainer 侧边栏',
+    address: 'pages/container/SideBarContainerPage'
+  },
 ]
+
+export class ContainComItem {
+  name: string = ''
+  address: string = ''
+}
 
 export default containCom

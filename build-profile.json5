@@ -5,22 +5,23 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.cer",
-          "storePassword": "0000001B93D8B9D37AC189665E5E24953A4316C049934C4FC65C42BDB713191E674ECFF03E924639BF62A6",
+          "certpath": "/Users/edy/.ohos/config/default_ArkUI_Component_hmGBPwC2hkuZjCyjmot0ixzQg3dRymRT9gE2XAWCLnI=.cer",
+          "storePassword": "0000001BFD2C34B0F97898368AA1A279BB828B4CB6CBA8215686BC0568DED36B22C6BC9020C85AF55E682A",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001B899C5D6FA9DEB42699A72C9ED292B4E8A11EC7AB1EBBD1E03976574B3ACD7987DC8732408EB315",
-          "profile": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.p7b",
+          "keyPassword": "0000001BC91023CB57E6F04FFB2316AD0E5AC55EB04C9554C16AA20E58C46E3B88AA3C84279CE5B52800B5",
+          "profile": "/Users/edy/.ohos/config/default_ArkUI_Component_hmGBPwC2hkuZjCyjmot0ixzQg3dRymRT9gE2XAWCLnI=.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "/Users/jiazeyu/.ohos/config/auto_debug_arkui-demo-app_com.gudaoessay.arkuicomponentdemo_30086000576523321.p12"
+          "storeFile": "/Users/edy/.ohos/config/default_ArkUI_Component_hmGBPwC2hkuZjCyjmot0ixzQg3dRymRT9gE2XAWCLnI=.p12"
         }
       }
     ],
-    "compileSdkVersion": 9,
-    "compatibleSdkVersion": 9,
     "products": [
       {
         "name": "default",
         "signingConfig": "default",
+        "compileSdkVersion": "4.1.0(11)",
+        "compatibleSdkVersion": "4.1.0(11)",
+        "runtimeOS": "HarmonyOS",
       }
     ]
   },

@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
@@ -15,7 +16,7 @@ struct TabsPage {
   BarPosition.Start,
   BarPosition.End
   ]
-  @State barPositionValueList: { value: string }[] = [
+  @State barPositionValueList: Array<ValueObject> = [
     { value: 'Start' },
     { value: 'End' }
   ]
@@ -32,7 +33,7 @@ struct TabsPage {
   BarMode.Scrollable,
   BarMode.Fixed
   ]
-  @State barModeValueList: { value: string }[] = [
+  @State barModeValueList: Array<ValueObject> = [
     { value: 'Scrollable' },
     { value: 'Fixed' }
   ]

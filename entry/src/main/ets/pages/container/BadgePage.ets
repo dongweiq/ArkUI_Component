@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
@@ -15,7 +16,7 @@ struct BadgePage {
   BadgePosition.Right,
   BadgePosition.Left
   ]
-  @State badgePositionValueList: { value: string }[] = [
+  @State badgePositionValueList: Array<ValueObject> = [
     { value: 'RightTop' },
     { value: 'Right' },
     { value: 'Left' }
@@ -32,7 +33,7 @@ struct BadgePage {
   Color.Orange,
   Color.Grey
   ]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Black' },
     { value: 'Blue' },
@@ -59,7 +60,7 @@ struct BadgePage {
   Color.Orange,
   Color.Grey
   ]
-  @State badgeColorValueList: { value: string }[] = [
+  @State badgeColorValueList: Array<ValueObject> = [
     { value: 'Red' },
     { value: 'Black' },
     { value: 'Blue' },

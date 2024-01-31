@@ -1,33 +1,55 @@
-const infoCom: {
-  name: string,
-  address: string
-}[] = [
-  { name: 'Image 图片',
-    address: 'pages/basic/ImagePage' },
+import { NameAddressObj } from './NameAddressObj'
 
-  { name: 'Span 行内文本',
-    address: 'pages/basic/SpanPage' },
+const infoCom: Array<NameAddressObj> = [
+  {
+    name: 'Image 图片',
+    address: 'pages/basic/ImagePage'
+  },
 
-  { name: 'ImageAnimator 帧动画',
-    address: 'pages/basic/ImageAnimatorPage' },
+  {
+    name: 'Span 行内文本',
+    address: 'pages/basic/SpanPage'
+  },
 
-  { name: 'LoadingProgress 加载',
-    address: 'pages/basic/LoadingProgressPage' },
+  {
+    name: 'ImageAnimator 帧动画',
+    address: 'pages/basic/ImageAnimatorPage'
+  },
 
-  { name: 'Progress 进度条',
-    address: 'pages/basic/ProgressPage' },
+  {
+    name: 'LoadingProgress 加载',
+    address: 'pages/basic/LoadingProgressPage'
+  },
 
-  { name: 'QRCode 二维码',
-    address: 'pages/basic/QRCodePage' },
+  {
+    name: 'Progress 进度条',
+    address: 'pages/basic/ProgressPage'
+  },
 
-  { name: 'Marquee 跑马灯',
-    address: 'pages/basic/MarqueePage' },
+  {
+    name: 'QRCode 二维码',
+    address: 'pages/basic/QRCodePage'
+  },
 
-  { name: 'DataPanel 数据面板',
-    address: 'pages/basic/DataPanelPage' },
+  {
+    name: 'Marquee 跑马灯',
+    address: 'pages/basic/MarqueePage'
+  },
 
-  { name: 'Gauge 数据量规',
-    address: 'pages/basic/GaugePage' },
+  {
+    name: 'DataPanel 数据面板',
+    address: 'pages/basic/DataPanelPage'
+  },
+
+  {
+    name: 'Gauge 数据量规',
+    address: 'pages/basic/GaugePage'
+  },
 ]
+
+export class InfoComItem {
+  name: string = ''
+  address: string = ''
+}
 
 export default infoCom

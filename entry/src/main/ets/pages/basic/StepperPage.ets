@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 
 @Entry
@@ -17,7 +18,7 @@ struct StepperPage {
   ItemState.Waiting,
   ItemState.Skip,
   ]
-  @State statusValueList: { value: string }[] = [
+  @State statusValueList: Array<ValueObject> = [
     { value: 'Normal' },
     { value: 'Disabled' },
     { value: 'Waiting' },

@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
 import SliderCustom from '../../component/controller/SliderCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
@@ -26,7 +27,7 @@ struct AlertDialogPage {
   DialogAlignment.Bottom,
   DialogAlignment.BottomEnd,
   ]
-  @State alignmentValueList : {value:string}[] = [
+  @State alignmentValueList : Array<ValueObject> = [
     {value :'Default'},
     {value :'TopStart'},
     {value :'Top'},

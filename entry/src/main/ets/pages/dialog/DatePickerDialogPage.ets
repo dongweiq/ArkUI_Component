@@ -42,7 +42,7 @@ struct DatePickerDialogPage {
                   selected: this.selectedDate,
                   lunar: this.lunar,
                   onAccept: (value: DatePickerResult) => {
-                    this.value = `已选择 ${value.year} 年 ${value.month + 1} 月 ${value.day} 日`
+                    this.value = `已选择 ${value.year} 年 ${value.month||0 + 1} 月 ${value.day} 日`
                   }
                 })
               })

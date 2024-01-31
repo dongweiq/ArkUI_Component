@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -20,7 +21,7 @@ struct TextAreaPage {
   Color.Green,
   Color.Orange
   ]
-  @State placeholderColorValueList: { value: string }[] = [
+  @State placeholderColorValueList: Array<ValueObject> = [
     { value: 'Grey' },
     { value: 'Blue' },
     { value: 'Black' },
@@ -39,7 +40,7 @@ struct TextAreaPage {
   TextAlign.Start,
   TextAlign.End
   ]
-  @State textAlignValueList: { value: string }[] = [
+  @State textAlignValueList: Array<ValueObject> = [
     { value: 'Center' },
     { value: 'Start' },
     { value: 'End' }
@@ -55,7 +56,7 @@ struct TextAreaPage {
   Color.Orange,
   Color.Grey
   ]
-  @State caretColorValueList: { value: string }[] = [
+  @State caretColorValueList: Array<ValueObject> = [
     { value: 'Blue' },
     { value: 'Black' },
     { value: 'Brown' },

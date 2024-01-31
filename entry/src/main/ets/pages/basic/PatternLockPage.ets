@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -19,7 +20,7 @@ struct PatternLockPage {
   Color.Green,
   Color.Orange
   ]
-  @State backgroundValueColorList: { value: string }[] = [
+  @State backgroundValueColorList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Gray' },
     { value: 'Black' },
@@ -45,7 +46,7 @@ struct PatternLockPage {
   Color.Green,
   Color.Orange
   ]
-  @State regularColorValueList: { value: string }[] = [
+  @State regularColorValueList: Array<ValueObject> = [
     { value: 'Black' },
     { value: 'Gray' },
     { value: 'Blue' },
@@ -64,7 +65,7 @@ struct PatternLockPage {
   Color.Green,
   Color.Orange
   ]
-  @State selectedColorValueList: { value: string }[] = [
+  @State selectedColorValueList: Array<ValueObject> = [
     { value: 'Black' },
     { value: 'Gray' },
     { value: 'Blue' },
@@ -83,7 +84,7 @@ struct PatternLockPage {
   Color.Green,
   Color.Orange
   ]
-  @State activeColorValueList: { value: string }[] = [
+  @State activeColorValueList: Array<ValueObject> = [
     { value: 'Black' },
     { value: 'Gray' },
     { value: 'Blue' },
@@ -102,7 +103,7 @@ struct PatternLockPage {
   Color.Green,
   Color.Orange
   ]
-  @State pathColorValueList: { value: string }[] = [
+  @State pathColorValueList: Array<ValueObject> = [
     { value: 'Gray' },
     { value: 'Black' },
     { value: 'Blue' },

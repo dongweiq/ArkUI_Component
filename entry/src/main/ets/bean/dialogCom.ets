@@ -1,7 +1,6 @@
-const dialogCom: {
-  name: string,
-  address: string
-}[] = [
+import { NameAddressObj } from './NameAddressObj'
+
+const dialogCom: Array<NameAddressObj> = [
   { name: 'AlertDialog 警告弹窗',
     address: 'pages/dialog/AlertDialogPage' },
 
@@ -21,4 +20,9 @@ const dialogCom: {
     address: 'pages/dialog/TextPickerDialogPage' },
 ]
 
+
+export class DialogComItem {
+  name: string = ''
+  address: string = ''
+}
 export default dialogCom

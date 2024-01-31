@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
@@ -23,7 +24,7 @@ struct CirclePage {
   Color.Orange,
   Color.Grey
   ]
-  @State fillValueList: { value: string }[] = [
+  @State fillValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Black' },
     { value: 'Blue' },
@@ -48,7 +49,7 @@ struct CirclePage {
   Color.Orange,
   Color.Grey
   ]
-  @State strokeValueList: { value: string }[] = [
+  @State strokeValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Black' },
     { value: 'Blue' },

@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -21,7 +22,7 @@ struct SliderPage {
   SliderStyle.OutSet,
   SliderStyle.InSet
   ]
-  @State styleValueList: { value: string }[] = [
+  @State styleValueList: Array<ValueObject> = [
     { value: 'OutSet' },
     { value: 'InSet' }
   ]
@@ -32,7 +33,7 @@ struct SliderPage {
   Axis.Horizontal,
   Axis.Vertical
   ]
-  @State directValueList: { value: string }[] = [
+  @State directValueList: Array<ValueObject> = [
     { value: 'Horizontal' },
     { value: 'Vertical' }
   ]
@@ -51,7 +52,7 @@ struct SliderPage {
   Color.Orange,
   Color.Grey
   ]
-  @State blockColorValueList: { value: string }[] = [
+  @State blockColorValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Blue' },
     { value: 'Black' },
@@ -71,7 +72,7 @@ struct SliderPage {
   Color.Orange,
   Color.Grey
   ]
-  @State trackColorValueList: { value: string }[] = [
+  @State trackColorValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Blue' },
     { value: 'Black' },
@@ -91,7 +92,7 @@ struct SliderPage {
   Color.Orange,
   Color.Grey
   ]
-  @State selectedColorValueList: { value: string }[] = [
+  @State selectedColorValueList: Array<ValueObject> = [
     { value: 'Blue' },
     { value: 'Black' },
     { value: 'Brown' },

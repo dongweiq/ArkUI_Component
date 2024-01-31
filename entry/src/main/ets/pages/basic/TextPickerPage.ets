@@ -9,17 +9,15 @@ struct TextPickerPage {
   private select: number = 1
   private fruits: string[] = ['选项1', '选项2', '选项3', '选项4', '选项5', '选项6']
   @State text: string = ''
-
   //defaultPickerItemHeight
   @State defaultPickerItemHeight: number = 40
-
   //width
   @State widthValue: number = 300
-
   //height
   @State heightValue: number = 300
 
-  @Builder pageTitle() {
+  @Builder
+  pageTitle() {
     Column() {
       Title({ pageTitle: 'TextPicker 滑动选择' })
       TitleTab({ selectTab: $selectTab, interface: false, property: true, common: false })
@@ -38,7 +36,7 @@ struct TextPickerPage {
               .fontColor($r('app.color.font_light'))
               .margin({ bottom: 20 })
             TextPicker({ range: this.fruits, selected: this.select })
-              .onChange((value: string, index: number) => {
+              .onChange((value, index) => {
                 this.text = `index : ${index} - value : ${value}`
               })
               .defaultPickerItemHeight(this.defaultPickerItemHeight)

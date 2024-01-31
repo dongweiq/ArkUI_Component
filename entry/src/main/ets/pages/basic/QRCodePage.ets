@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -21,7 +22,7 @@ struct QRCodePage {
   Color.Orange,
   Color.Grey
   ]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'Black' },
     { value: 'Blue' },
     { value: 'Brown' },
@@ -41,7 +42,7 @@ struct QRCodePage {
   Color.Green,
   Color.Orange
   ]
-  @State backgroundColorValueList: { value: string }[] = [
+  @State backgroundColorValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Gray' },
     { value: 'Black' },

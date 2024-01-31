@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -15,7 +16,7 @@ struct DividerPage {
   //color
   @State selectColor: Color = Color.Black
   @State colorList: Color[] = [Color.Black, Color.Blue, Color.Brown, Color.Green, Color.Orange, Color.Grey]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'Black' },
     { value: 'Blue' },
     { value: 'Brown' },
@@ -30,7 +31,7 @@ struct DividerPage {
   //lineCap
   @State selectLineCap: LineCapStyle = LineCapStyle.Butt
   @State lineCapList: LineCapStyle[] = [LineCapStyle.Butt, LineCapStyle.Round, LineCapStyle.Square]
-  @State lineCapValueList: { value: string }[] = [{ value: 'Butt' }, { value: 'Round' }, { value: 'Square' }]
+  @State lineCapValueList: Array<ValueObject> = [{ value: 'Butt' }, { value: 'Round' }, { value: 'Square' }]
 
   //width
   @State widthValue: number = 200

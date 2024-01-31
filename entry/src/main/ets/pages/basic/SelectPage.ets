@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -17,7 +18,7 @@ struct SelectPage {
     .backgroundColor($r('app.color.start_window_background'))
   }
 
-  private value: { value: string }[] = [
+  private value: Array<ValueObject> = [
     { value: '选项1' },
     { value: '选项2' },
     { value: '选项3' },
@@ -37,7 +38,7 @@ struct SelectPage {
   Color.Green,
   Color.Orange,
   ]
-  @State fontColorValueList: { value: string }[] = [
+  @State fontColorValueList: Array<ValueObject> = [
     { value: 'Grey' },
     { value: 'Black' },
     { value: 'Blue' },
@@ -57,7 +58,7 @@ struct SelectPage {
   Color.Green,
   Color.Orange,
   ]
-  @State selectedOptionBgColorValueList: { value: string }[] = [
+  @State selectedOptionBgColorValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Grey' },
     { value: 'Black' },
@@ -77,7 +78,7 @@ struct SelectPage {
   Color.Green,
   Color.Orange,
   ]
-  @State optionFontColorValueList: { value: string }[] = [
+  @State optionFontColorValueList: Array<ValueObject> = [
     { value: 'Grey' },
     { value: 'Black' },
     { value: 'Blue' },
@@ -96,7 +97,7 @@ struct SelectPage {
   Color.Green,
   Color.Orange,
   ]
-  @State selectedOptionFontColorValueList: { value: string }[] = [
+  @State selectedOptionFontColorValueList: Array<ValueObject> = [
     { value: 'Grey' },
     { value: 'Black' },
     { value: 'Blue' },
@@ -116,7 +117,7 @@ struct SelectPage {
   Color.Green,
   Color.Orange,
   ]
-  @State optionBgColorValueList: { value: string }[] = [
+  @State optionBgColorValueList: Array<ValueObject> = [
     { value: 'White' },
     { value: 'Grey' },
     { value: 'Black' },

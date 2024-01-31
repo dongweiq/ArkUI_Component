@@ -1,42 +1,70 @@
-const inputCom: {
-  name: string,
-  address: string
-}[] = [
-  { name: 'TextInput 单行文本输入',
-    address: 'pages/basic/TextInputPage' },
+import { NameAddressObj } from './NameAddressObj'
 
-  { name: 'TextArea 多行文本输入',
-    address: 'pages/basic/TextAreaPage' },
+const inputCom: Array<NameAddressObj> = [
+  {
+    name: 'TextInput 单行文本输入',
+    address: 'pages/basic/TextInputPage'
+  },
 
-  { name: 'Toggle 开关',
-    address: 'pages/basic/TogglePage' },
+  {
+    name: 'TextArea 多行文本输入',
+    address: 'pages/basic/TextAreaPage'
+  },
 
-  { name: 'Slider 滑动条',
-    address: 'pages/basic/SliderPage' },
+  {
+    name: 'Toggle 开关',
+    address: 'pages/basic/TogglePage'
+  },
 
-  { name: 'Rating 评分',
-    address: 'pages/basic/RatingPage' },
+  {
+    name: 'Slider 滑动条',
+    address: 'pages/basic/SliderPage'
+  },
 
-  { name: 'Select 下拉选择',
-    address: 'pages/basic/SelectPage' },
+  {
+    name: 'Rating 评分',
+    address: 'pages/basic/RatingPage'
+  },
 
-  { name: 'TextPicker 选择文本',
-    address: 'pages/basic/TextPickerPage' },
+  {
+    name: 'Select 下拉选择',
+    address: 'pages/basic/SelectPage'
+  },
 
-  { name: 'Radio 单选框',
-    address: 'pages/basic/RadioPage' },
+  {
+    name: 'TextPicker 选择文本',
+    address: 'pages/basic/TextPickerPage'
+  },
 
-  { name: 'Checkbox 多选框',
-    address: 'pages/basic/CheckboxPage' },
+  {
+    name: 'Radio 单选框',
+    address: 'pages/basic/RadioPage'
+  },
 
-  { name: 'CheckboxGroup 多选框组',
-    address: 'pages/basic/CheckboxGroupPage' },
+  {
+    name: 'Checkbox 多选框',
+    address: 'pages/basic/CheckboxPage'
+  },
 
-  { name: 'DatePicker 日期选择',
-    address: 'pages/basic/DatePickerPage' },
+  {
+    name: 'CheckboxGroup 多选框组',
+    address: 'pages/basic/CheckboxGroupPage'
+  },
 
-  { name: 'TimePicker 时间选择',
-    address: 'pages/basic/TimePickerPage' },
+  {
+    name: 'DatePicker 日期选择',
+    address: 'pages/basic/DatePickerPage'
+  },
+
+  {
+    name: 'TimePicker 时间选择',
+    address: 'pages/basic/TimePickerPage'
+  },
 ]
+
+export class InputComItem {
+  name: string = ''
+  address: string = ''
+}
 
 export default inputCom

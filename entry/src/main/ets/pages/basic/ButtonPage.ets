@@ -4,37 +4,38 @@ import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
 import SliderCustom from '../../component/controller/SliderCustom'
 
+
+export class ValueObject {
+  value: string = ''
+}
+
 @Entry
 @Component
 struct ButtonPage {
   @State selectTab: number = 1
-
   //type
   @State type: ButtonType = ButtonType.Capsule
   @State typeArr: ButtonType[] = [
-  ButtonType.Capsule,
-  ButtonType.Circle,
-  ButtonType.Normal
+    ButtonType.Capsule,
+    ButtonType.Circle,
+    ButtonType.Normal
   ]
-  @State typeValueArr: { value: string }[] = [
+  @State typeValueArr: Array<ValueObject> = [
     { value: 'Capsule' },
     { value: 'Circle' },
     { value: 'Normal' }
   ]
-
   //stateEffect
   @State stateEffect: boolean = true
-
   //width
   @State widthValue: number = 80
-
   //height
   @State heightValue: number = 50
-
   //fontSize
   @State sizeValue: number = 14
 
-  @Builder pageTitle() {
+  @Builder
+  pageTitle() {
     Column() {
       Title({ pageTitle: 'Button 按钮' })
       TitleTab({ selectTab: $selectTab, interface: false, property: true, common: true })
@@ -62,16 +63,16 @@ struct ButtonPage {
 
           Column() {
             //tab 1
-            Column () {
+            Column() {
               SelectCustom({ name: 'type', valuesList: $typeValueArr, itemsList: $typeArr, selectItem: $type })
               Divider()
                 .color($r('app.color.line_grey'))
               SwitchCustom({ name: 'stateEffect', isOn: $stateEffect })
             }
             .visibility(this.selectTab === 1 ? Visibility.Visible : Visibility.None)
-            
+
             //tab 2
-            Column(){
+            Column() {
               SliderCustom({ name: 'width', value: $widthValue, min: 50, max: 180 })
               Divider()
                 .color($r('app.color.line_grey'))

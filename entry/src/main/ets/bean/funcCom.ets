@@ -1,24 +1,41 @@
-const funcCom: {
-  name: string,
-  address: string
-}[] = [
-  { name: 'Menu 菜单',
-    address: 'pages/basic/MenuPage' },
+import { NameAddressObj } from './NameAddressObj'
 
-  { name: 'Search 搜索框',
-    address: 'pages/basic/SearchPage' },
+const funcCom: Array<NameAddressObj> = [
+  {
+    name: 'Menu 菜单',
+    address: 'pages/basic/MenuPage'
+  },
 
-  { name: 'TextClock 文本时钟',
-    address: 'pages/basic/TextClockPage' },
+  {
+    name: 'Search 搜索框',
+    address: 'pages/basic/SearchPage'
+  },
 
-  { name: 'TextTimer 计时器',
-    address: 'pages/basic/TextTimerPage' },
+  {
+    name: 'TextClock 文本时钟',
+    address: 'pages/basic/TextClockPage'
+  },
 
-  { name: 'Stepper 步骤导航器',
-    address: 'pages/basic/StepperPage' },
+  {
+    name: 'TextTimer 计时器',
+    address: 'pages/basic/TextTimerPage'
+  },
 
-  { name: 'PatternLock 密码锁',
-    address: 'pages/basic/PatternLockPage' },
+  {
+    name: 'Stepper 步骤导航器',
+    address: 'pages/basic/StepperPage'
+  },
+
+  {
+    name: 'PatternLock 密码锁',
+    address: 'pages/basic/PatternLockPage'
+  },
 ]
+
+
+export class FuncComItem {
+  name: string = ''
+  address: string = ''
+}
 
 export default funcCom

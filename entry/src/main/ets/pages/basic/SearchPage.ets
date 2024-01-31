@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -10,7 +11,7 @@ struct SearchPage {
   //color
   @State selectColor: Color = Color.Grey
   @State colorList: Color[] = [Color.Grey, Color.Black, Color.Blue, Color.Brown, Color.Green, Color.Orange]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'Grey' },
     { value: 'Black' },
     { value: 'Blue' },
@@ -26,7 +27,7 @@ struct SearchPage {
   CopyOptions.InApp,
   CopyOptions.LocalDevice
   ]
-  @State copyOptionValueList: { value: string }[] = [
+  @State copyOptionValueList: Array<ValueObject> = [
     { value: 'None' },
     { value: 'InApp' },
     { value: 'LocalDevice' }

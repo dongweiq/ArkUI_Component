@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
@@ -29,7 +30,7 @@ struct ScrollPage {
   Color.Orange,
   Color.Grey
   ]
-  @State scrollBarColorValueList: { value: string }[] = [
+  @State scrollBarColorValueList: Array<ValueObject> = [
     { value: 'Blue' },
     { value: 'Black' },
     { value: 'Brown' },
@@ -48,7 +49,7 @@ struct ScrollPage {
     EdgeEffect.Spring,
     EdgeEffect.Fade
   ]
-  @State edgeEffectValueList : { value : string }[] = [
+  @State edgeEffectValueList : Array<ValueObject> = [
     {value:'None'},
     {value:'Spring'},
     {value:'Fade'},

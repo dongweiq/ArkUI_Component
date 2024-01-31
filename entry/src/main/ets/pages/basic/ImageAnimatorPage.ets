@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -33,7 +34,7 @@ struct ImageAnimatorPage {
   AnimationStatus.Paused,
   AnimationStatus.Stopped
   ]
-  @State stateValueList: { value: string }[] = [
+  @State stateValueList: Array<ValueObject> = [
     { value: 'Initial' },
     { value: 'Running' },
     { value: 'Paused' },
@@ -54,7 +55,7 @@ struct ImageAnimatorPage {
   FillMode.Backwards,
   FillMode.Both,
   ]
-  @State fillModeValueList: { value: string }[] = [
+  @State fillModeValueList: Array<ValueObject> = [
     { value: 'None' },
     { value: 'Forwards' },
     { value: 'Backwards' },

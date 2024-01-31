@@ -1,9 +1,11 @@
+import { ValueObject } from '../../bean/ValueObject'
+
 @Component
 export default struct SelectCustom {
   @Prop name: string
-  @Link valuesList: { value: string }[]
-  @Link itemsList: any[]
-  @Link selectItem: any
+  @Link valuesList: Array<ValueObject>
+  @Link itemsList: Array<Object>
+  @Link selectItem: Object
 
   build() {
     Column() {
@@ -24,3 +26,4 @@ export default struct SelectCustom {
     .width('100%')
   }
 }
+

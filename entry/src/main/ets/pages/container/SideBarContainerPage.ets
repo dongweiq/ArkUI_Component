@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
+import { ValueObject } from '../basic/ButtonPage'
 
 @Entry
 @Component
@@ -12,41 +13,37 @@ struct SideBarContainerPage {
   selectedIcon: Resource = $r("app.media.ic_public_folder_filled")
   @State arr: number[] = [1, 2, 3]
   @State current: number = 1
-
   //--> interface
   //type
   @State type: SideBarContainerType = SideBarContainerType.Embed
   @State typeList: SideBarContainerType[] = [
-  SideBarContainerType.Embed,
-  SideBarContainerType.Overlay
+    SideBarContainerType.Embed,
+    SideBarContainerType.Overlay
   ]
-  @State typeValueList: { value: string }[] = [
+  @State typeValueList: Array<ValueObject> = [
     { value: 'Embed' },
     { value: 'Overlay' }
   ]
-
   //--> property
   //showSideBar
   @State showSideBar: boolean = true
-
   //showControlButton
   @State showControlButton: boolean = true
-
   //sideBarWidth
   @State sideBarWidth: number = 60
-
   //sideBarPosition
   @State sideBarPosition: SideBarPosition = SideBarPosition.Start
   @State sideBarPositionList: SideBarPosition[] = [
-  SideBarPosition.Start,
-  SideBarPosition.End
+    SideBarPosition.Start,
+    SideBarPosition.End
   ]
-  @State sideBarPositionValueList: { value: string }[] = [
+  @State sideBarPositionValueList: Array<ValueObject> = [
     { value: 'Start' },
     { value: 'End' }
   ]
 
-  @Builder pageTitle() {
+  @Builder
+  pageTitle() {
     Column() {
       Title({ pageTitle: 'SideBarContainer 侧边栏' })
       TitleTab({ selectTab: $selectTab, interface: true, property: true, common: false })
@@ -65,7 +62,7 @@ struct SideBarContainerPage {
               Column() {
                 Column()
                   .height(50)
-                ForEach(this.arr, (item, _) => {
+                ForEach(this.arr, (item: number, _) => {
                   Column({ space: 5 }) {
                     Image(this.current === item ? this.selectedIcon : this.normalIcon)
                       .width(32)
@@ -79,7 +76,7 @@ struct SideBarContainerPage {
                   .onClick(() => {
                     this.current = item
                   })
-                }, item => item)
+                })
               }
               .width('100%')
               .justifyContent(FlexAlign.Start)

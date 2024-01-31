@@ -35,7 +35,6 @@ struct MenuPage {
     }
     .width(this.widthValue)
     .height(this.heightValue)
-    .fontSize(this.fontSize)
 
   }
 

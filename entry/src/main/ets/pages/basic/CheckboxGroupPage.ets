@@ -2,6 +2,7 @@ import TitleTab from '../../component/title/TitleTab'
 import Title from '../../component/title/Title'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SliderCustom from '../../component/controller/SliderCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -18,7 +19,7 @@ struct CheckboxPage {
   Color.Orange,
   Color.Grey
   ]
-  @State colorValueList: { value: string }[] = [
+  @State colorValueList: Array<ValueObject> = [
     { value: 'Black' },
     { value: 'Blue' },
     { value: 'Brown' },

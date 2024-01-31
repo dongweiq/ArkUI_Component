@@ -3,6 +3,7 @@ import Title from '../../component/title/Title'
 import SliderCustom from '../../component/controller/SliderCustom'
 import SelectCustom from '../../component/controller/SelectCustom'
 import SwitchCustom from '../../component/controller/SwitchCustom'
+import { ValueObject } from './ButtonPage'
 
 @Entry
 @Component
@@ -20,7 +21,7 @@ struct TextInputPage {
   InputType.Email,
   InputType.Password
   ]
-  @State typeValueList: { value: string }[] = [
+  @State typeValueList: Array<ValueObject> = [
     { value: 'Normal' },
     { value: 'Number' },
     { value: 'PhoneNumber' },
@@ -38,7 +39,7 @@ struct TextInputPage {
   Color.Green,
   Color.Orange
   ]
-  @State placeholderColorValueList: { value: string }[] = [
+  @State placeholderColorValueList: Array<ValueObject> = [
     { value: 'Grey' },
     { value: 'Blue' },
     { value: 'Black' },
@@ -59,7 +60,7 @@ struct TextInputPage {
   EnterKeyType.Next,
   EnterKeyType.Done
   ]
-  @State enterKeyTypeValueList: { value: string }[] = [
+  @State enterKeyTypeValueList: Array<ValueObject> = [
     { value: 'Go' },
     { value: 'Search' },
     { value: 'Send' },
@@ -77,7 +78,7 @@ struct TextInputPage {
   Color.Orange,
   Color.Grey
   ]
-  @State caretColorValueList: { value: string }[] = [
+  @State caretColorValueList: Array<ValueObject> = [
     { value: 'Blue' },
     { value: 'Black' },
     { value: 'Brown' },
@@ -98,7 +99,7 @@ struct TextInputPage {
   TextInputStyle.Default,
   TextInputStyle.Inline
   ]
-  @State styleValueList: { value: string }[] = [
+  @State styleValueList: Array<ValueObject> = [
     { value: 'Default' },
     { value: 'Inline' }
   ]
@@ -110,7 +111,7 @@ struct TextInputPage {
   TextAlign.Start,
   TextAlign.End
   ]
-  @State textAlignValueList: { value: string }[] = [
+  @State textAlignValueList: Array<ValueObject> = [
     { value: 'Center' },
     { value: 'Start' },
     { value: 'End' }
